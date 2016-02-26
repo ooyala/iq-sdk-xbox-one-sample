@@ -4,9 +4,17 @@
         <title></title>
             <script type="text/javascript" >
                 console.log(" HELLOOOOOOOOOOOOO");
+                window.addEventListener("message", receiveMessage, false);
+
+                function receiveMessage(event)
+                {
+                    console.log("Got a message !", event);
+
+                    // ...
+                }
             </script>
 
-        <script src="../js/analytics.js"></script>
+
     </head>
     <body>
     </body>

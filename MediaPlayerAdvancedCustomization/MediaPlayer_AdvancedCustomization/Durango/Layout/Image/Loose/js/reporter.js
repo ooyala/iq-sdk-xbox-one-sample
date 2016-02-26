@@ -1,5 +1,6 @@
 ﻿(function () {
     "use strict";
+
     var _PRIORITIES = {
         LOW : 0,
         MEDIUM : 1,
@@ -11,15 +12,15 @@
         DISPLAY : { name:"display",priority : _PRIORITIES.HIGH},
         PLAY_REQUESTED : { name:"playRequested",priority : _PRIORITIES.HIGH},
         VIDEO_STARTED : { name:"videoStarted",priority : _PRIORITIES.HIGH},
-        PLAYTHROUGH_PERCENT: { name:"playthroughPercent",priority : _PRIORITIES.LOW},
-        PERCENTAGE_WATCHED : { name:"percentageWatched",priority : _PRIORITIES.LOW},
-        BUCKETS_WATCHED : { name:"bucketWatched",priority : _PRIORITIES.LOW},
-        REPLAY : { name:"replay",priority : _PRIORITIES.LOW},
+        PLAYTHROUGH_PERCENT: { name:"playthroughPercent",priority : _PRIORITIES.HIGH},
+        PERCENTAGE_WATCHED : { name:"percentageWatched",priority : _PRIORITIES.HIGH},
+        BUCKETS_WATCHED : { name:"bucketWatched",priority : _PRIORITIES.HIGH},
+        REPLAY : { name:"replay",priority : _PRIORITIES.HIGH},
         SEEK : { name:"seek",priority : _PRIORITIES.MEDIUM},
         PAUSE : { name:"pause",priority : _PRIORITIES.HIGH},
         RESUME : { name:"resume",priority : _PRIORITIES.MEDIUM},
-        TIME_PLAYED : { name:"timePlayed",priority : _PRIORITIES.LOW},
-        PLAYHEAD_UPDATE : { name : "playheadUpdate", priority : _PRIORITIES.LOW},
+        TIME_PLAYED : { name:"timePlayed",priority : _PRIORITIES.HIGH},
+        PLAYHEAD_UPDATE : { name : "playheadUpdate", priority : _PRIORITIES.HIGH},
         CUSTOM: { name:"custom", priority : _PRIORITIES.HIGH}
     };
 
@@ -30,18 +31,17 @@
         return event;
     }
 
-
     var addPendingEvent = function(event, priority) {
         event["sequenceNum"] = this._currentSequenceNumber;
         updateNextFlushingTime.call(this,priority);
         console.log("Adding event "+ event["eventName"]);
         this._pendingEvents.push(event);
         this._currentSequenceNumber++;
-    }
+    };
 
     function updateNextFlushingTime(priority) {
         var wouldBeNextFlushTime = Date.now() + this._priorityIntervals[priority];
-       
+
         if( wouldBeNextFlushTime < this._flushTime){
             clearTimeout(this._flushTimeout);
             this._flushTimeout = setTimeout(function(){
@@ -92,7 +92,6 @@
         this._lastFlush = time;
     }
 
-
     function trackPlaythroughPercent(){
         var percentage = (this._buckets.watchedCount / this._buckets.count) * 100;
         if(percentage >= this._nextPlaythroughToReport){
@@ -120,8 +119,7 @@
                 bucketIndex =  i -1;
                 found = true;
             }
-            else
-            {
+            else {
                 i = i + 1;
             }
         }
@@ -145,7 +143,7 @@
         var event = makeStandardEvent(_EVENTS.PERCENTAGE_WATCHED);
         event["startMille"] = index * 25 +1;
         event["endMille"] = index * 25 +25;
-        addPendingEvent.call(this,event,_EVENTS.PERCENTAGE_WATCHED.priority);
+        addPendingEvent.call(this,event, _EVENTS.PERCENTAGE_WATCHED.priority);
         this._buckets.watchedCount++;
     }
 
@@ -153,23 +151,20 @@
         var event = makeStandardEvent(_EVENTS.BUCKETS_WATCHED);
         event["startMille"] = index * 25 +1;
         event["endMille"] = index * 25 +25;
-        addPendingEvent.call(this,event,_EVENTS.BUCKETS_WATCHED.priority);
+        addPendingEvent.call(this, event, _EVENTS.BUCKETS_WATCHED.priority);
     }
 
 
 
-    var buildAndAddEventToPending = function(eventEnum){
+    function buildAndAddEventToPending(eventEnum) {
         var event = makeStandardEvent(eventEnum);
-        addPendingEvent.call(this,event, eventEnum.priority);
-    };
+        addPendingEvent.call(this, event, eventEnum.priority);
+    }
 
 
-
-    
     Ooyala.Reporter = function (pCode, params) {
-
         this._base = {};
-        this._base.asset = {assetType : params.source}
+        this._base.asset = {idType : params.source}
         this._base.sessionId = params.guid;
         this._base.pcode = pCode;
         this._base.sessionStartTime = (new Date()).toISOString();
@@ -178,8 +173,18 @@
         this._playheadPositionMillis = 0;
         //this._base.user = userInfo;
         //this._base.geo = geoInfo;
-        //this._base.device = getDeviceInfo();
-
+        this._base.device = {
+            "id": "8J1gDIJtaKfh7H0KnrBAzG7Pa0KSONL3iHMouMZzHU4",
+            "deviceInfo": {
+                "browser": "chrome",
+                "browserVersion": "33.0.1750.146",
+                "os": "windows",
+                "osVersion": "8.0",
+                "deviceType": "console",
+                "deviceBrand": "MicroSoft",
+                "model": "Xbox One"
+            }
+        };
 
         this._lastFlush = 0;
         this._liveContent = false;
@@ -189,51 +194,47 @@
         this._currentSequenceNumber = 0;
         this._flushTime = Number.MAX_VALUE;
         this._timePlayed = 0;
-        this._iqEndpoint = "http://10.11.67.197:9000/session/xbox8/v3/analytics/events" //FIXME 
+        this._iqEndpoint = " http://ip-10-50-40-172.sjc1.ooyala.net:61057/session/xbox-qa-testing/v3/analytics/events" //FIXME
         this._priorityIntervals = [10000, 5000, 1000];
         this._seek = {start : 0, end : 0};
         this._lastTimePlayed = 0;
         this._hasContentStarted = false;
         this._flushTimeout = null;
         this._buckets = {watched : [], current : -1, startingTimes : [], count : 40, watchedCount : 0};
-        this._nextPlaythroughToReport = 25;
-
-
-
+        this._nextPlaythroughToReport = 25; // We will report 25/50/75/100
     };
 
 
 
     Ooyala.Reporter.prototype = {
-        reportPlayerLoad : function(){
+        reportPlayerLoad : function() {
             buildAndAddEventToPending.call(this, _EVENTS.PLAYER_LOAD);
         },
-        initializeVideo : function(mediaId){
+        initializeVideo : function(mediaId) {
             this._base.asset.id = mediaId;
         },
-        setVideoDuration : function(durationMillis){
-            if(durationMillis <= 0){
+        setVideoDuration : function(durationMillis) {
+            if(durationMillis <= 0) {
                 this._liveContent = true;
             } else {
                 computeBuckets.call(this, durationMillis);
             }
             buildAndAddEventToPending.call(this, _EVENTS.DISPLAY);
         },
-        reportPlayRequested : function(){
+        reportPlayRequested : function(autoplay) {
             var event = makeStandardEvent(_EVENTS.PLAY_REQUESTED);
-            event["isAutoPlay"] = false;
+            event["isAutoPlay"] = autoplay || false;
             addPendingEvent.call(this,event, _EVENTS.PLAY_REQUESTED.priority);
         },
-        reportReplay : function(){
+        reportReplay : function() {
             var event = makeStandardEvent(_EVENTS.REPLAY);//FIXME AUTOPLAY
             event["isAutoPlay"] = false;
             addPendingEvent.call(this, event, _EVENTS.REPLAY.priority);
         },
-        reportVideoStarted : function(){
+        reportVideoStarted : function() {
             buildAndAddEventToPending.call(this, _EVENTS.VIDEO_STARTED);
         },
-        reportPlayheadUpdate: function (playHeadPositionMillis){
-
+        reportPlayheadUpdate: function (playHeadPositionMillis) {
             //console.log("time update ", playHeadPositionMillis);
             this._timePlayed = this._timePlayed + (playHeadPositionMillis - this._lastTimePlayed);
             this._lastTimePlayed = playHeadPositionMillis;
@@ -263,10 +264,5 @@
         reportComplete : function() {
             flushPendingEvents.call(this);
         }
-
-
     }
-
-
-
 })(Ooyala);

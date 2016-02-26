@@ -84,16 +84,6 @@
 
                     var mediaPlayer = document.getElementById("mediaplayer").winControl;
 
-                  //  IQ.initSession(mediaPlayer.mediaElementAdapter.mediaElement, "ooyala" );
-                    //IQ.setContentMetadata(30.8, BACKLOT_ACCOUNT.PCODE, IQ.EXTERNAL_ASSET);
-
-
-
-
-
-
-                    //iq.Ooyala.Analytics.HTML5Reporter('F4NGUyOvIrsRkkvtsm9r-Uu_qENR', mediaPlayer.mediaElementAdapter.mediaElement);
-
                     getStreamForAsset(asset, function(streamUrl){
                         mediaPlayer.setContentMetadata(XboxJS.Data.ContentType.movie, { title: asset.name, description: asset.description })
                             .done(
@@ -109,9 +99,13 @@
                                     }else {
                                         mediaPlayer.mediaElementAdapter.mediaElement = element.querySelector("#video");
                                         mediaPlayer.mediaElementAdapter.mediaElement.src = streamUrl;
-                                        mediaPlayer.mediaElementAdapter.mediaElement.setAttribute('data-oo-embedId', 'k4cWdsdzoTxuCp6lyBN7TSTsI6OmdII9');
+                                        mediaPlayer.mediaElementAdapter.mediaElement.setAttribute('data-oo-embedId', asset.embed_code);
 
-                                        Ooyala.XboxAdapter('F4NGUyOvIrsRkkvtsm9r-Uu_qENR', mediaPlayer.mediaElementAdapter.mediaElement);
+                                        var source = "ooyala";
+                                        if(asset.asset_type !== "video") {
+                                            source = "external";
+                                        }
+                                        Ooyala.XboxAdapter(BACKLOT_ACCOUNT.pcode, mediaPlayer.mediaElementAdapter.mediaElement, {source : source});
                                     }
 
                                 },
@@ -124,7 +118,7 @@
                                     }
                                 }
                             );
-                    })
+                    });
 
 
                     setImmediate(function afterPageRenderingHasFinished() {

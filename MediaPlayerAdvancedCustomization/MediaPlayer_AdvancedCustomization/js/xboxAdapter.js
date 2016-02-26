@@ -1,9 +1,5 @@
 ﻿(function () {
 
-
-
-
-
     Ooyala.XboxAdapter = function(pCode, player, options) {
         var self = this;
 
@@ -16,7 +12,6 @@
             playerName: "html5",
             playerId: "html5"
         }
-
         for (var attr in options) { self._options[attr] = options[attr]; }
 
         self._ooyalaReporter = new Ooyala.Analytics.Reporter(pCode, self._options);

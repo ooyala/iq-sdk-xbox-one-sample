@@ -72,7 +72,7 @@ Ooyala.Analytics.Reporter = function (pCode, options) {
 
     var moduleParams = {
         "guid": this._guid,
-        "source": "ooyala"
+        "source": options.source
     };
 
 
@@ -153,6 +153,7 @@ Ooyala.Analytics.Reporter.prototype = {
      * @method Ooyala.Analytics.Reporter#reportPause
      */
     reportPause: function () {
+        this._reporter.reportPause();
     },
 
     /**
@@ -160,6 +161,7 @@ Ooyala.Analytics.Reporter.prototype = {
      * @method Ooyala.Analytics.Reporter#reportResume
      */
     reportResume: function () {
+        this._reporter.reportResume();
     },
 
     /**
@@ -167,5 +169,6 @@ Ooyala.Analytics.Reporter.prototype = {
      * @method Ooyala.Analytics.Reporter#reportComplete
      */
     reportComplete: function () {
+        this._reporter.reportComplete();
     }
 };
