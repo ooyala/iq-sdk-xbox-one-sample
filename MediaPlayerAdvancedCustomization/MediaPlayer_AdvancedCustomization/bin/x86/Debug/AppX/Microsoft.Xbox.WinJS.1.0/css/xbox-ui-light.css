@@ -1,0 +1,5612 @@
+﻿/* Fonts */
+
+@font-face {
+    font-family: "Segoe Xbox Symbol";
+    src: url('segxsym.woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*
+Weight and size definitions for typographic classes and elements.
+*/
+h1, .win-type-xx-large {
+	font-size: 68pt;
+	font-weight: 200;
+	letter-spacing: 1pt;
+	line-height: 1.1429; /* 78pt when font-size is 68pt */
+}
+
+h2, .win-type-x-large, .win-text-herotiletitle {
+	font-size: 46pt;
+	font-weight: 200;
+	line-height: 1.2777; /* 59pt when font-size is 46pt */
+}
+
+h3, .win-type-large, .win-text-pagetitle, .win-tabview-tab-header-interactive > .win-type-x-large, .win-mediaplayer-mediatitle {
+	font-size: 30pt;
+	font-weight: 200;
+	line-height: 1.2857; /* 39pt when font-size is 30pt */
+}
+
+h4, .win-type-medium, code, pre, samp, .win-text-pagesubtitle, .win-text-herotilesubtitle, .win-text-bodycontent, .win-text-metadata, .win-appbar-title {
+	font-size: 22pt;
+	font-weight: 300;
+	line-height: 1.5; /* 33pt when font-size is 22pt */
+}
+
+body {
+    background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/    
+}
+
+body, h5, .win-type-small, legend, .win-text-tiletitle, .win-text-tilemetadata, select, .win-voice-activetext,
+.win-button, .win-listpicker-item, .win-menu button.win-command, .win-button-flyout, 
+.win-menu button, .win-voice-textdisplay, .win-hub-previousnextvoicecontainer, .win-backbutton-voiceactivation, .win-appbar-subtitle, .win-mediaplayer-mediadescription  {
+    font-size: 18pt;
+    font-weight: 400;
+    line-height: 1.5; /* 27pt when font-size is 18pt */
+}
+
+.win-type-x-small {
+	font-size: 18pt;
+	font-weight: 400;
+	line-height: 1.3636; /* 25pt when font-size is 18p */
+}
+
+h6, caption, figcaption, small, .win-type-xx-small {
+	font-size: 14pt;
+	font-weight: 400;
+	line-height: 1.6667; /* 23pt when font-size is 14pt */
+}
+
+dt, th, .win-type-small-bold {
+	font-size: 18pt;
+	font-weight: 700;
+	line-height: 1.3636; /*  25pt when font-size is 18pt */
+}
+
+abbr, acronym, address, blockquote, cite, dl, dd, li, ol, p, q, td, tr {
+	font-weight: 300;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+.smallcaps, .win-tile-galleryheader .win-text-tiletitle, .win-tile-galleryheader .win-voice-textdisplay {
+    font-size: 14pt;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.win-hub-section-header-content {
+    letter-spacing: 2px;
+    font-size: 15pt;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* kern: kerning
+   dlig: discretionary ligatures; stylistic sets (provides the correct numeral style & spacing) */
+/**********************************************************************************************************************************************/
+body,
+input,
+button,
+option,
+select,
+textarea,
+.win-textarea,
+.win-type-xx-large,
+.win-type-x-large,
+.win-type-large,
+.win-type-medium,
+.win-type-small,
+.win-type-x-small,
+.win-type-xx-small,
+.win-text-pagetitle,
+.win-text-pagesubtitle,
+.win-text-tiletitle,
+.win-text-tilemetadata,
+.win-text-herotiletitle,
+.win-text-herotilesubtitle,
+.win-text-bodycontent,
+.win-text-metadata {
+    font-feature-settings: "kern" 1, "dlig" 1, "ss20" 1;
+}
+
+/* append this class when numbers need a fixed with, such as progress indicators */
+/**********************************************************************************************************************************************/
+.win-text-fixedwidthnumerals {
+    font-feature-settings: "kern" 1, "dlig" 1, "tnum" 1;
+}
+
+/*  9pt     XX SMALL
+    11pt    X SMALL         
+    14pt    SMALL
+    20pt    MEDIUM              200 LIGHT
+    24pt    LARGE               300 NORMAL
+    30pt    X LARGE             400 BOLD
+    42pt    XX LARGE            600 HEAVY   */
+/**********************************************************************************************************************************************/
+
+
+/* line-height override */
+/**********************************************************************************************************************************************/
+/*  7pt         XXX SMALL
+    9pt         XX SMALL
+    10.75pt     X SMALL         
+    13.5pt      SMALL
+    20pt        MEDIUM
+    24pt        LARGE
+    34pt        X LARGE
+    37.5pt      XX LARGE
+    50pt        XXX LARGE   */
+/**********************************************************************************************************************************************/
+
+/* Icon Styles */
+.win-icon,
+.win-icon-xxxsmall,
+.win-icon-xxsmall,
+.win-icon-xsmall,
+.win-icon-small,
+.win-icon-medium,
+.win-icon-large,
+.win-icon-xlarge,
+.win-icon-xxlarge,
+.win-inlineglyph,
+.win-inlineglyphSmall {
+    font-family: 'Segoe Xbox Symbol', 'Segoe UI Symbol';
+}
+
+/* xxsmall; icon size 9pt (12px) */
+/**********************************************************************************************************************************************/
+
+.win-icon-xsmall {
+    font-size: 10.75pt;
+}
+
+.win-icon-small {
+    font-size: 13.5pt;
+}
+
+.win-icon-medium {
+    font-size: 15pt;
+}
+
+.win-icon-large
+{
+    font-size: 24pt;
+}
+
+.win-iconButton .win-commandimage {
+    font-size: 17pt;
+}
+
+/* Symbol and Icon Declarations */
+.win-icon-gamerscore::before {
+    font-family: "Segoe Xbox Symbol";
+    content: "\E3D5";
+}
+
+.win-icon-trophy::before
+{
+    content: "\E412";
+}
+
+.win-icon-gift::before
+{
+    content: "\E3EF";
+}
+
+.win-icon-locked::before
+{
+    content: "\E411";
+}
+
+.win-icon-settings::before {
+    content: '\E40E';
+}
+
+.win-icon-signin::before {
+    content: '\E2FC';
+}
+
+.win-icon-payment::before {
+    content: '\E386';
+}
+
+.win-icon-subscriptions::before {
+    content: '\E2FD';
+}
+
+.win-icon-notifications::before {
+    content: '\E399';
+}
+
+.win-icon-kinect::before {
+    content: '\E364';
+}
+
+.win-icon-kinectsettings::before {
+    content: '\E304';
+}
+
+.win-icon-sound::before {
+    content: '\E393';
+}
+
+.win-icon-viewmore::before
+{
+    font-family: 'Segoe UI Symbol';
+    content: "\E10C";
+}
+
+.win-icon-thumbsDown::before
+{
+    font-family: "Segoe UI Symbol";
+    content: "\E19E";
+}
+
+.win-icon-thumbsUp::before
+{
+    font-family: "Segoe UI Symbol";
+    content: "\E19F";
+}
+
+.win-icon-x::before {
+    font-family: "Segoe Xbox Symbol";
+    content: '\E409';
+}
+.win-icon-bullet::before
+{
+    font-family: "Segoe UI Symbol";
+    content: "\E236";
+}
+
+.win-icon-moreflyout::after {
+    font-family: "Segoe UI Symbol";
+    content: "\E26B";
+}
+
+.win-icon-more::before {
+    font-family: "Segoe Xbox Symbol";
+    content: '\E34B'; 
+}
+
+.win-icon-search::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E11A';
+}
+
+.win-icon-play::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E102';
+}
+
+.win-icon-addqueue::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E109';
+}
+
+.win-icon-removequeue::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E108';
+}
+
+.win-icon-pin::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E141';
+}
+
+.win-icon-rate::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E113';
+}
+
+.win-icon-favorite::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E249';
+}
+
+.win-icon-browse::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E138';
+}
+
+.win-icon-queue::before {
+    font-family: "Segoe UI Symbol";
+    content: '\E14C';
+}
+
+.win-icon-gofullscreen::before {
+    font-family: "Segoe Xbox Symbol";
+    content: '\E45A';
+}
+
+/*
+    Common Styles
+*/
+/* This style is for voice only elements that are visually disabled, such as a Previous Page label
+   if the user is already at the beginning on the list. */
+.win-voice-disabledlabel {
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+/*
+    TabView.
+*/
+.win-tabview {
+    height: 100%;
+    width: 100%;
+}
+.win-tab-viewport {
+    height: 100%;
+    width: 100%;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-item-align: end;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.win-tab-surface {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.win-tabs-container {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    height: 100px;
+}
+
+.win-tabview-tab-tabstop {
+    border: 0;
+    outline: none;
+}
+
+.win-tabview-tab-tabstop:hover {
+    background-color: transparent;
+}
+
+.win-tabview-tab-tabstop:hover .win-tabview-tab-header-content {
+    font-weight: 200;
+    border-bottom: 5px solid rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+.win-tab-currentselected .win-tabview-tab-tabstop:hover .win-tabview-tab-header-content {
+    border-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-tabview-tab-tabstop.win-tabview-tab-header-interactive:active {
+    background-color: transparent;
+}
+
+@keyframes WinJS-tabview-pressheader { from { transform: scale(1, 1); } to { transform: scale(0.75, 0.75); } }
+
+/*
+    Tab styles.
+*/
+.win-tabview-tab {
+    position: relative;
+    padding: 0;
+}
+
+.win-tabview-tab-header {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    margin: 10px 0;
+    text-align: left;
+    display: inline;
+    margin-right:55px;
+}
+
+.win-tabview-tab-hidden {
+    display: none;
+}
+
+.win-tabview-tab-visible {
+    display: block;
+}
+
+.win-tabview-tab-header-content {
+    font-size: 36px;
+    font-weight: 200;
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-tabview-tab-header:focus .win-tabview-tab-header-content {
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    font-weight: 300;
+}
+
+.win-tabview-tab-header-interactive .win-tabview-tab-header-chevron {
+    display: none;
+}
+
+body:not(.win-visiblebutnotfocused) .win-tabview-tab-header-interactive:focus .win-tabview-tab-header-content {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    font-weight: 200;
+}
+
+.win-tab-currentselected .win-tabview-tab-header-content {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-tabview-tab-content {
+    overflow:scroll;
+}
+
+/* Media Tile Control */
+/* Shared Styles */
+.win-mediatile .win-item {
+    height: 208px;
+    width: 208px; 
+    border: none; 
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+}
+
+/*classes that override the sizes of default media tiles
+some layouts of mediatile variants may not react well
+to being sized differently*/
+.win-layout-mediatilelargelandscape .win-item {
+    height: 424px;
+    width: 856px; 
+}
+
+.win-layout-mediatilelargeportrait .win-item {
+    height: 640px;
+    width: 424px; 
+}
+
+.win-layout-mediatilelargesquare .win-item {
+    height: 424px;
+    width: 424px; 
+}
+
+.win-layout-mediatilesmallsquare .win-item {
+    height: 208px;
+    width: 208px; 
+}
+
+.win-layout-verticaltile .win-item {
+    height: 424px;
+    width: 424px; 
+}
+
+.win-layout-mediatilelargelandscape .win-voice-container,
+.win-layout-mediatilelargeportrait .win-voice-container,
+.win-layout-mediatilelargesquare .win-voice-container,
+.win-layout-mediatilesmallsquare .win-voice-container {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 10px 36px 10px;
+    -ms-grid-columns: 10px 1fr 10px;
+}
+
+.win-layout-mediatilelargelandscape .win-voice-textdisplay,
+.win-layout-mediatilelargeportrait .win-voice-textdisplay,
+.win-layout-mediatilelargesquare .win-voice-textdisplay,
+.win-layout-mediatilesmallsquare .win-voice-textdisplay {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+}
+
+.win-layout-mediatilelargelandscape .win-voice-overlay,
+.win-layout-mediatilelargeportrait .win-voice-overlay,
+.win-layout-mediatilelargesquare .win-voice-overlay,
+.win-layout-mediatilesmallsquare .win-voice-overlay {
+    -ms-grid-row: 2;
+     -ms-grid-column-span: 3;  
+    -ms-grid-row-span: 3;
+}
+
+.win-mediatile-metadatagrid {
+    position: relative;
+    display: -ms-grid;
+    overflow: hidden;
+    -ms-grid-rows: 1fr auto;
+    -ms-grid-columns: auto 1fr;
+    width: 100%;
+    height: 100%;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+    
+}
+    .win-mediatile-imagehost {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-row-span: 2;
+        -ms-grid-column-span: 2;
+        background-repeat: no-repeat;
+        background-position:center center;
+    }
+    .win-mediatile-metadata {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-row-align: center;
+        display: -ms-grid;
+        -ms-grid-rows: auto;
+        -ms-grid-columns: 1fr;
+    }
+
+    .win-mediatile-metadatabackground {
+        opacity: 1;
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        background-color: rgba(16, 16, 16, 0.6); /*XboxClr-VideoSafeBlack*/
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+        transition-property: opacity;
+    }
+
+
+    .win-mediatile-title {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            width: auto;
+            padding: 10px;             
+        }
+
+.win-layout-mediatilelargelandscape .win-mediatile-metadata,
+.win-layout-mediatilelargeportrait .win-mediatile-metadata,
+.win-layout-mediatilelargesquare .win-mediatile-metadata,
+.win-layout-mediatilesmallsquare .win-mediatile-metadata {
+    -ms-grid-column-span: 2;
+    width: 100%;
+}
+
+.win-layout-mediatilelargelandscape .win-mediatile-title,
+.win-layout-mediatilelargeportrait .win-mediatile-title,
+.win-layout-mediatilelargesquare .win-mediatile-title,
+.win-layout-mediatilesmallsquare .win-mediatile-title {
+    text-overflow: clip;
+    overflow: visible;
+    white-space: normal;
+    max-height: 36px;
+    animation-name: animateMediaTileTitleOnLostFocus;
+    animation-duration: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+}
+
+.win-layout-mediatilelargelandscape:focus .win-mediatile-title,
+.win-layout-mediatilelargeportrait:focus .win-mediatile-title,
+.win-layout-mediatilelargesquare:focus .win-mediatile-title,
+.win-layout-mediatilesmallsquare:focus .win-mediatile-title {
+    max-height: 108px;
+    animation-name: animateMediaTileTitleOnFocus;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+}
+
+    @keyframes animateMediaTileTitleOnFocus {
+        0% {
+            max-height: 36px;
+        }
+        100% {
+            max-height: 108px;
+        }
+    }
+
+    @keyframes animateMediaTileTitleOnLostFocus {
+        0% {
+            max-height: 108px;
+        }
+        100% {
+            max-height: 36px;
+        }
+    }
+
+        .win-mediatile-season { 
+            visibility: hidden;
+        }
+
+        .win-layout-mediatilelargeportrait .win-mediatile-information,
+        .win-layout-mediatilelargesquare .win-mediatile-information,
+        .win-layout-mediatilesmallsquare .win-mediatile-information,
+        .win-layout-mediatilesmallsquare .win-mediatile-information {
+            display: none;
+        }
+
+/* Horizontal Media Tile for Movies */
+/*add this class to a win-mediatile to use the horizontal Movie media tile layout*/
+.win-mediatile-layout-horizontalmovie .win-item {
+    height: 208px;
+    width: 424px;                                     
+}
+
+.win-mediatile-layout-horizontalmovie .win-mediatile-metadatagrid {
+    -ms-grid-rows: 24px 160px 24px;
+    -ms-grid-columns: 24px 120px 24px 232px 24px;
+}
+
+    .win-mediatile-layout-horizontalmovie .win-mediatile-metadatagrid > .win-mediatile-imagehost {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-column-span: 1;
+        background-repeat: no-repeat;
+        background-position:center center;
+    }
+
+    .win-mediatile-layout-horizontalmovie .win-mediatile-layout-title-rightedge-grid {
+        display: -ms-grid;
+        -ms-grid-rows: 134px;
+        -ms-grid-columns: 1fr;
+        overflow: hidden;
+    }
+
+    .win-mediatile-layout-horizontalmovie .win-mediatile-metadatagrid > .win-mediatile-metadata {
+        -ms-grid-row: 2;
+        -ms-grid-column: 4;
+        display: -ms-grid;
+        -ms-grid-rows: auto auto;
+        -ms-grid-columns: 1fr;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;       
+        color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    }
+
+        .win-mediatile-layout-horizontalmovie .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-title {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 105px;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .win-mediatile-layout-horizontalmovie .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-information {
+            visibility: visible; 
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: normal;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        
+        .win-mediatile-layout-horizontalmovie .win-mediatile-metadatabackground {
+            display: none;
+        }
+
+/* Horizontal Media Tile for TV */
+/*add this class to a win-mediatile to use the horizontal TV media tile layout*/
+.win-mediatile-layout-horizontaltv .win-item {
+    height: 208px;
+    width: 424px;
+}
+
+.win-mediatile-layout-horizontaltv .win-mediatile-metadatagrid {
+    -ms-grid-rows: 24px 160px 24px;
+    -ms-grid-columns: 24px 160px 24px 192px 24px;
+}
+
+    .win-mediatile-layout-horizontaltv .win-mediatile-metadatagrid > .win-mediatile-imagehost {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-column-span: 1;
+        background-repeat: no-repeat;
+        background-position:center center;
+    }
+
+    .win-mediatile-layout-horizontaltv .win-mediatile-metadatagrid > .win-mediatile-metadata {
+        -ms-grid-row: 2;
+        -ms-grid-column: 4;
+        overflow: hidden;
+        display: -ms-grid;
+        -ms-grid-rows: auto 1fr;
+        -ms-grid-columns: 1fr;
+        width: 100%;
+        height: 100%;
+        background-color: transparent; 
+        color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/  
+    }
+
+        .win-mediatile-layout-horizontaltv .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-title {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 105px;
+            height: auto;
+            padding: 0;
+            margin: 0;           
+        }
+
+        .win-mediatile-layout-horizontaltv .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-season {
+            visibility: visible;
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 105px;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .win-mediatile-layout-horizontaltv .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-information {
+            visibility: visible;
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: normal;
+            height: auto;
+            padding: 0;
+            margin: 0;       
+        }
+
+        .win-mediatile-layout-horizontaltv  .win-mediatile-metadatabackground {
+            display: none;
+        }
+
+/* Horizontal Media Tile for Split view */
+/*add this class to a win-mediatile to use the horizontal Split View media tile layout*/
+.win-mediatile-layout-horizontalsplit .win-item {
+    height: 208px;
+    width: 424px;
+}
+     
+.win-mediatile-layout-horizontalsplit .win-mediatile-metadatagrid {
+    -ms-grid-rows: 24px 1fr 24px;
+    -ms-grid-columns: 50% 24px 1fr 24px;
+}
+
+    .win-mediatile-layout-horizontalsplit .win-mediatile-metadatagrid > .win-mediatile-imagehost {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column-span: 1;
+        background-repeat: no-repeat;
+        background-position:center center;
+    }
+
+    .win-mediatile-layout-horizontalsplit .win-mediatile-metadatagrid > .win-mediatile-metadata {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+        overflow: hidden;
+        display: -ms-grid;
+        -ms-grid-rows: 1fr auto;
+        -ms-grid-columns: 1fr;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;  
+        color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    }
+
+        .win-mediatile-layout-horizontalsplit .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-title {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 142px;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .win-mediatile-layout-horizontalsplit .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-information {
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            max-height: 38px;
+            height: auto;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .win-mediatile-layout-horizontalsplit .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-season {
+            visibility: visible;
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 105px;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .win-mediatile-layout-horizontalsplit  .win-mediatile-metadatabackground {
+            display: none;
+        }
+
+/* Media Tile for verticalmediatile page */
+/*add this class to a win-mediatile to use the verticalmediatile layout*/
+.win-mediatile-layout-verticaltile .win-item {
+    height: 580px;
+    width: 424px;
+}
+
+.win-mediatile-layout-verticaltile .win-mediatile-metadatagrid {
+    -ms-grid-rows: 424px 24px 102px;
+    -ms-grid-columns: 280px;
+    width: 280px;
+    height: 550px;
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: transparent;
+}
+
+    .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-imagehost {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        width: 280px;
+        height: 424px;
+        background-repeat: no-repeat;
+        background-position:center center;
+        overflow: hidden;
+    }
+
+    .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-metadata {
+        -ms-grid-row: 3;
+        overflow: hidden;
+        display: -ms-grid;
+        -ms-grid-rows: auto 1fr;
+        -ms-grid-columns: 1fr;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+        .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-title {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 105px;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-information {
+            visibility: visible;
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            max-height: 105px;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .win-mediatile-layout-verticaltile .win-mediatile-metadatabackground {
+            display: none;
+        }
+
+/* Button */
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    padding: 0;
+    font-size: 18pt;
+    font-weight: 400;
+}
+
+/* Progress Control */
+progress {
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/    
+    background-color:  rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+progress:indeterminate {
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/   
+}
+
+progress.win-progress-fullscreen:indeterminate,
+progress.win-hub-progress {
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index: 1;
+    position: absolute;
+}
+
+progress.win-progress-fullscreen:indeterminate::-ms-fill {
+    animation-name: -ms-ring;
+}
+
+progress.win-large.win-ring {
+    width: 100px;
+    height: 100px;
+}
+
+/* Rating control */
+.win-rating {
+	display: -ms-inline-flexbox;
+	height: auto;
+	width: 150px;
+	white-space: normal;
+	-ms-flex-align: stretch;
+	-ms-flex-pack: center;
+}
+
+.win-rating .win-star{
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+.win-rating .win-star.win-user.win-full,
+.win-rating .win-star.win-user.win-full.win-disabled {
+    color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+}
+
+.win-rating .win-star.win-tentative.win-full {
+    color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+}
+
+/*Title safe page layout grid*/
+/*the outer rows and colums (1 and 7) are "overscan" area 
+the next step in (2 and 6) are the "action safe" area
+the center 3 are the title safe layout area -
+use win-layout-pagegrid when page has no pagecontrol at the root
+rows: header, body and footer
+columns: left, center, and right*/
+.win-layout-pagegrid {
+    position: fixed;
+    display: -ms-grid;
+    -ms-grid-rows: 32px 8px auto 1fr auto 8px 32px;
+    -ms-grid-columns: 64px 36px auto 1fr auto 36px 64px;
+    -ms-overflow-style: none;
+    overflow-y: visible;
+    transform-origin: 50% 50%;
+}
+
+.win-layout-pagegrid > .win-layout-titlesafeheader {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    display: -ms-grid;
+    -ms-grid-columns: auto auto 1fr 16px 600px; /*rightmost area reserved for system chrome*/
+    -ms-grid-rows: 1fr;
+    height: 64px;
+    width: 100%;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    transition-property: left;
+}
+
+.win-layout-pagegrid:not(.win-voice-voicemodeactive) > .win-layout-titlesafeheader:not(.win-backbuttonvisible) {
+    left: -54px;
+}
+
+.win-voice-voicemodeactive.win-layout-pagegrid > .win-layout-titlesafeheader:not(.win-backbuttonvisible),
+.win-gestureactive .win-layout-pagegrid > .win-layout-titlesafeheader:not(.win-backbuttonvisible) {
+    left: 0px;
+}
+
+/* The following div increases the attraction region without displacing the button */
+.win-backbutton-attractionregion {
+    position: fixed;
+    height: 117px;
+    width: 174px;
+    top: 0;
+    left: 0;
+    -ms-attraction: 20px 0px 0px 80px;
+}
+
+    .win-layout-titlesafeheader > button.win-layout-backbutton {
+        display: inline;
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-align: center;
+        position: relative;
+        opacity: 0;
+        left: 0px;
+        -ms-attraction: none;
+    }
+    .win-gestureactive .win-layout-titlesafeheader > button.win-layout-backbutton {
+        opacity: 1;
+        display: inline;
+        left: 0px;
+    }
+
+    .win-layout-titlesafeheader > button.win-layout-backbutton:not(.win-hidden) {
+        margin: 0 0 0 0;
+    }
+     
+    .win-voice-voicemodeactive .win-layout-titlesafeheader > button.win-layout-backbutton:not(.win-hidden),
+    .win-gestureactive .win-layout-titlesafeheader > button.win-layout-backbutton:not(.win-hidden) {
+       margin: 0 36px 0 0;
+    }
+
+    .win-layout-titlesafeheader > button.win-layout-backbutton.win-hidden {
+        display: none;
+    }
+
+        .win-voice-voicemodeactive .win-layout-titlesafeheader > button.win-layout-backbutton {
+            opacity: 1;
+        }
+
+    .win-layout-titlesafeheader > .win-layout-applogo {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-align: center;
+        padding: 0px;
+    }
+
+    .win-layout-titlesafeheader > .win-layout-pagetitle {
+        -ms-grid-column: 3;
+        -ms-grid-row: 1;
+        margin: 3px 0 0 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;   
+        white-space: nowrap;
+    }
+
+.win-layout-pagegrid > .win-layout-titlesafecontent {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+}
+
+.win-layout-pagegrid > .win-layout-fullscreencontent {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    -ms-grid-row-span: 7;
+    width: 100%;
+    height: 100%;
+}
+
+.win-layout-pagegrid > .win-layout-snappablebrowsegallery,
+.win-layout-pagegrid > .win-layout-edgetoedgehorizontalcontent {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+}
+
+.win-layout-pagegrid > .win-layout-titlesafefooter {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    width: 100%;
+}
+
+.win-pagecontrol-hidden {
+    opacity: 0;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .win-layout-pagegrid {
+        -ms-grid-rows: 32px 8px auto 1fr auto 8px 32px;
+        -ms-grid-columns: 0px 28px auto 1fr auto 0px 64px;
+    }
+
+        .win-layout-pagegrid > .win-layout-titlesafeheader {
+        display: -ms-grid;
+        -ms-grid-columns: auto 1fr;
+        -ms-grid-rows: 64px 64px;
+        height: 128px;
+        width: 100%;
+    }
+
+ .win-layout-titlesafeheader > .win-layout-backbutton {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        transition-property: margin, left, opacity;
+        margin: 0 0 0 0;
+        left: 0px;
+        opacity: 0;
+    }
+
+        .win-backbutton-attractionregion {
+            -ms-attraction: 20px 50px 0px 0px;
+        }
+
+    .win-layout-titlesafeheader > .win-layout-backbutton.win-voice-disambiguationlistening,
+    .win-layout-titlesafeheader > .win-layout-backbutton.win-voice-activelistening,
+    .win-gestureactive .win-layout-titlesafeheader > .win-layout-backbutton {
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        transition-property: margin, left, opacity;
+        margin: 0 36px 0 0;
+        left: 0px;
+        opacity: 1;
+    }
+
+   .win-layout-titlesafeheader > .win-layout-applogo {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        margin: 0 0 0 0;
+    }
+
+   .win-layout-titlesafeheader > .win-layout-pagetitle {
+         display: block;
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        margin: 0 0 0 0;
+        position: fixed;
+        left: 28px;
+    }
+
+    .win-layout-pagegrid > .win-layout-snappablebrowsegallery {
+        -ms-grid-row: 4;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 3;
+        overflow: visible;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    .win-layout-pagegrid {
+        -ms-grid-rows: 32px 8px auto 1fr auto 8px 32px;
+        -ms-grid-columns: 64px 36px auto 1fr auto 52px 0px;
+    }
+
+    .win-layout-pagegrid > .win-layout-titlesafeheader {
+        display: -ms-grid;
+        -ms-grid-columns: auto 1fr;
+        -ms-grid-rows: 64px 0px;
+        height: 64px;
+    }
+   .win-layout-pagegrid > .win-layout-titlesafeheader:not(.win-backbuttonvisible) {
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        transition-property: left;
+        left: -54px;
+    }
+    .win-gestureactive .win-layout-pagegrid > .win-layout-titlesafeheader:not(.win-backbuttonvisible) {
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+        transition-property: left;
+        left: 0px;
+    }
+
+   .win-layout-titlesafeheader > .win-layout-applogo {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        margin: 0 0 0 0;
+    }
+
+    .win-layout-titlesafeheader > .win-layout-pagetitle {
+        display: block;
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        margin-top: 3px;
+    }
+
+    .win-layout-pagegrid > .win-layout-snappablebrowsegallery {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 7;
+        overflow: visible;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*=== Default Button Style ===*/
+.win-button {
+    outline: none;
+    border: none;
+    /* TODO Source correct ui-light background color value */
+    background-color: rgb(107,107,107); /*XboxClr-Ui3*/
+}
+
+ /*Flyout Button Style*/
+.win-button-flyout{
+    margin-top: 6px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 15px;
+    color: rgb(58, 58, 58); /*XboxClr-Ui2*/    
+    background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+/* Overlay Styles */
+.win-overlay-backgroundcolor, .win-appbar-overlay-backgroundcolor {
+    background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+}
+
+.win-overlay-contextindicator {
+    position: fixed;
+    /* The z-index is just below the z-index for the overlay, which is 1008 */
+    z-index: 1007;
+}
+
+.win-scrollindicator {
+    margin-top: -4px;
+    height: 104px;
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto auto 32px;
+}
+
+/* Gesture styles */
+.win-overlay-dismissoverlay {
+    height: 136px;
+    margin-bottom: -4px;
+    padding-right: 4px;
+    padding-left: calc(100% - 135px);
+    text-align: center;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    /* This makes the region press-able */
+    -ms-attraction: 0% 0% 0% 70%;
+}
+
+/* The AppBar is larger so it needs an adjusted attraction region */
+.win-appbar .win-overlay-dismissoverlay {
+    -ms-attraction: 0% 0% 0% 75%;
+}
+
+.win-gestureactive .win-overlay-dismissoverlay::before {
+    visibility: visible;
+}
+
+.win-overlay-dismissoverlay::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E409';
+    line-height: 136px;
+    font-size: 22pt;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+    visibility: hidden;
+    border-width: 3px;
+    margin-left: 34px;
+    margin-right: 34px;
+    border-style: solid;
+    border-radius: 50%;
+    background-clip: border-box;
+}
+
+.win-appbarclickeater,
+.win-flyoutmenuclickeater {
+    -ms-attraction: 0;
+}
+
+.win-voice-voicemodeactive .win-overlay-dismissoverlay::before {
+    line-height: 70px;
+}
+
+.win-voice-voicemodeactive.win-appbar .win-overlay-dismissoverlay::before {
+    line-height: 0px;
+}
+
+.win-gestureactive .win-voice-voicemodeactive .win-overlay-dismissoverlay::before {
+    line-height: 88px;
+}
+
+.win-gestureactive .win-voice-voicemodeactive.win-appbar .win-overlay-dismissoverlay::before {
+    line-height: 104px;
+}
+
+.win-overlay-voice-command {
+    margin: 16px;
+    line-height: 100px;
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+.win-overlay-dismissoverlay .win-overlay-voice-command {
+    text-align: center;
+    margin: 0px;
+    line-height: 32px;
+}
+
+.win-listpicker .win-scrollindicator .win-overlay-voice-command {
+    -ms-grid-row-align: end;
+    line-height: 36px;
+    white-space: normal;
+}
+
+/* Voice and gesture styles */
+.win-voice-voicemodeactive .win-scrollindicator {
+    -ms-grid-columns: 16px 1fr 1fr 16px;
+}
+
+.win-listpicker .win-voice-voicemodeactive .win-scrollindicator {
+    -ms-grid-rows: 1fr;
+}
+
+.win-overlay-container {
+    height: auto;
+    position: relative;
+    z-index: 1008;
+    /*This container has the background color of the flyout*/
+}
+
+.win-overlay-container .win-tile-listbutton {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+    .win-overlay-contextindicator-up .win-overlay-contextindicator,
+    .win-overlay-contextindicator-down .win-overlay-contextindicator,
+    .win-overlay-contextindicator-left .win-overlay-contextindicator,
+    .win-overlay-contextindicator-right .win-overlay-contextindicator {
+        height: 25px;
+        width: 25px;      
+        transform: rotate(45deg);
+    }
+
+/*=== ItemContainerStyles ===*/
+
+.win-tile-galleryheader .win-item,
+.win-tile-galleryheader .win-voice-container {
+    display: -ms-grid;
+    -ms-grid-rows: 15px 1fr auto 15px;
+    -ms-grid-columns: 18px 1fr 18px;
+}
+
+.win-tile-galleryheader .win-item {
+    width: 208px;
+    height: 100px;
+}
+
+.win-tile-galleryheader .win-item {
+    background-color: rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+    color: rgb(16, 16, 16); /*XboxClr-VidoSafeBlack*/
+}
+
+body:not(.win-visiblebutnotfocused) .win-tile-galleryheader:focus .win-item {
+    background-color: rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+    box-shadow: inset 0 0 0 1px rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+}
+
+.win-disabled.win-tile-galleryheader .win-item, 
+.win-disabled.win-tile-galleryheader:focus .win-item {
+    background-color:  rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-listpicker .win-tile-galleryheader .win-text-tiletitle,
+.win-listpicker .win-tile-galleryheader .win-voice-textdisplay {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-align: start;
+    margin: 10px 0 0 10px;
+}
+
+.win-tile-galleryheader .win-text-tiletitle,
+.win-tile-galleryheader .win-voice-textdisplay {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-align: end;
+    max-height: 58px;
+    overflow: hidden;
+    text-overflow: clip;
+    }
+
+.win-tile-horizontaltext .win-item,
+.win-tile-horizontaltext .win-voice-container {
+    display: -ms-grid;
+    -ms-grid-rows: 15px 1fr auto 15px;
+    -ms-grid-columns: 18px 1fr 18px;
+}
+
+.win-tile-horizontaltext .win-item {
+    width: 424px;
+    height: 100px;
+}
+
+.win-tile-horizontaltext .win-item {
+    background-color:  rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(16, 16, 16); /*XboxClr-VidoSafeBlack*/
+    box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+}
+
+body:not(.win-visiblebutnotfocused) .win-tile-horizontaltext:focus .win-item {
+    background-color:  rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+    box-shadow: inset 0 0 0 1px rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+}
+
+.win-disabled.win-tile-horizontaltext .win-item, 
+.win-disabled.win-tile-horizontaltext:focus .win-item {
+    background-color:  rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-flyout .win-disabled.win-tile-horizontaltext .win-item,
+.win-flyout .win-disabled.win-tile-horizontaltext:focus .win-item {
+    background-color: rgb(72, 72, 72);
+    color: rgb(115, 115, 115);
+}
+
+.win-tile-horizontaltext .win-text-tiletitle,
+.win-tile-horizontaltext .win-voice-textdisplay {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-align: end;
+    max-height: 70px;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.win-tile-centeredtext .win-item,
+.win-tile-centeredtext .win-voice-container  {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr auto 1fr;
+    -ms-grid-columns: 18px 36px 1fr 18px;
+}
+
+.win-tile-centeredtext .win-item {
+    height: 100px;
+    width: 424px;
+}
+
+.win-tile-centeredtext .win-item {
+    background-color:  rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(16, 16, 16); /*XboxClr-VidoSafeBlack*/
+    box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+}
+
+body:not(.win-visiblebutnotfocused) .win-tile-centeredtext:focus .win-item {
+    background-color: rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+    box-shadow: inset 0 0 0 1px rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+}
+
+.win-disabled.win-tile-centeredtext .win-item, 
+.win-disabled.win-tile-centeredtext:focus .win-item {
+    background-color: rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-tile-centeredtext-icon {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    margin-right: 16px;
+}
+
+.win-tile-centeredtext .win-text-tiletitle, 
+.win-tile-centeredtext .win-voice-textdisplay {
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-align: center;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.win-tile-listbutton.win-disabled {
+    background-color: rgb(72, 72, 72);
+    color: rgb(115, 115, 115);
+}
+
+.win-tile-listbutton:not(win-focused) > .win-tile-focusindicator {
+    transition-duration: 0s;
+}
+
+.win-tile-listbutton .win-item, 
+.win-tile-listbutton .win-voice-container {
+    display: -ms-grid;
+    -ms-grid-rows: 15px 1fr 15px;
+    -ms-grid-columns: 18px auto 1fr 18px;
+}
+
+.win-tile-listbutton.win-listpicker-item-selected .win-voice-container {
+    -ms-grid-columns: 18px 48px 1fr 18px;
+}
+
+/*don't show bling button bg's in lists*/
+.win-tile-listbutton .win-voice-overlay {
+    background-color: transparent;
+}
+.win-tile-listbutton .win-voice-textdisplay {
+    transform: translateY(0px);
+}
+
+.win-tile-listbutton .win-item {
+    height: 100px;
+    width: 424px;
+}
+
+.win-tile-listbutton .win-item {
+    background-color: rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(235, 235, 235); /*XboxClr-VidoSafeWhite*/
+}
+
+body:not(.win-visiblebutnotfocused) .win-tile-listbutton:focus .win-item {
+    background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VidoSafeWhite*/
+}
+
+.win-disabled.win-tile-listbutton .win-item, 
+.win-disabled.win-tile-listbutton:focus .win-item {
+    background-color: rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+    .win-tile-listbutton .win-text-tiletitle,
+    .win-tile-listbutton .win-voice-textdisplay  {
+        -ms-grid-column: 3;
+        -ms-grid-row: 2;
+        -ms-grid-row-align: center;
+        max-height: 70px;
+        overflow: hidden;
+        text-overflow:clip;
+    }
+
+.win-tile-systemicon .win-item,
+.win-tile-systemicon .win-voice-container {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 5px auto 15px;
+    -ms-grid-columns: 18px auto 1fr;
+}
+
+.win-tile-systemicon .win-item {
+    height: 208px;
+    width: 208px;
+}
+
+.win-tile-systemicon .win-voice-overlay {
+   -ms-grid-column-span:3;
+   -ms-grid-row: 3;
+   -ms-grid-row-span:2;   
+}
+
+.win-tile-systemicon .win-item {
+    background-color: rgb(16, 124, 16); /*XboxClr-BrandGreen*/
+    color: rgb(235, 235, 235); /*XboxClr-VidoSafeWhite*/
+}
+
+    .win-tile-systemicon-icon {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        -ms-grid-row-span: 4;
+        margin-bottom: 30px;
+        -ms-grid-row-align: center;
+        -ms-grid-column-align: center;
+        font-size: 48pt;
+    }
+
+    .win-tile-systemicon .win-text-tiletitle,
+    .win-tile-systemicon .win-voice-textdisplay {
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
+        margin-right: 18px;
+        -ms-grid-row-align: end;
+        max-height: 70px;
+        overflow: hidden;
+        text-overflow:clip;
+    }
+
+
+.win-disabled.win-tile-systemicon .win-item {
+    background-color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+    color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+}
+
+.win-tile-more .win-itemcontainer-captureproxy {
+    height: 100px;
+}
+
+.win-itemcontainer-captureproxy.win-itemcontainer-imagemask {
+    background-color: rgb(235, 235, 235);
+}
+
+.win-tile-more .win-item {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 15px 70px 15px;
+    -ms-grid-rows: 1fr auto 1fr;
+    width: 100px;
+    height: 64px;
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+    color: rgb(16, 16, 16); /*XboxClr-VidoSafeBlack*/
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+    transition-property: width;
+}
+
+.win-tile-more .win-voice-container {
+    display: none;
+}
+
+.win-tile-more  .win-icon-more {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    text-align: center;
+    line-height: 36pt;
+    font-size: 20pt;
+    opacity:1;
+    transition-duration: 0.20s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+}
+
+.win-voice-activelistening.win-tile-more .win-text-tiletitle {
+    line-height: 44px;
+}
+
+.win-tile-more .win-text-tiletitle {
+    padding-left: 15px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    color: rgb(93, 194, 30); /*XboxClr-LightGreen*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    opacity:0;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+}
+
+.win-itemcontainer.win-tile-underline .win-item,
+.win-tile-underline .win-itemcontainer .win-item  {
+    box-shadow: inset 0 -1px 0 0px rgba(58, 58, 58, 1); /*XboxClr-Ui2*/
+}
+
+.win-itemcontainer.win-tile-underline:hover:not(.win-disabled) .win-item,
+.win-itemcontainer.win-tile-underline:focus .win-item,
+.win-tile-underline .win-itemcontainer:hover:not(.win-disabled) .win-item,
+.win-tile-underline .win-itemcontainer:focus .win-item {
+    box-shadow: inset 0 -1px 0 0px rgba(58, 58, 58, 0); /*XboxClr-Ui2*/
+}
+
+/*=== checkbox and radiobuttons tiles ===*/
+.win-checkboxtile .win-item,
+.win-checkboxtile .win-voice-container,
+.win-radiobuttontile .win-item,
+.win-radiobuttontile .win-voice-container {
+    display: -ms-grid;
+    -ms-grid-columns: 100px 306px 18px;
+    -ms-grid-rows: 1fr;
+}
+
+.win-checkboxtile .win-item,
+.win-radiobuttontile .win-item {
+    height: 100px;
+    width: 424px;
+}
+
+.win-checkboxtile .win-voice-overlay,
+.win-radiobuttontile .win-voice-overlay {
+    -ms-grid-column: 2;
+}
+
+.win-checkboxtile .win-item,
+.win-radiobuttontile .win-item {
+    color: rgb(16, 16, 16); /*XboxClr-VidoSafeBlack*/
+    box-shadow: inset 0 0 0 1px rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+}
+
+.win-checkboxtile:focus .win-item,
+.win-radiobuttontile:focus .win-item {
+    box-shadow: inset 0 0 0 1px rgba(235, 235, 235, 0); /*XboxClr-VidoSafeWhite*/
+    background-color: rgba(16, 16, 16, 0.1); /*XboxClr-VidoSafeBlack*/
+}
+
+.win-checkboxtile-checkbox,
+.win-radiobuttontile-radiobuttonbox {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    border: 4px solid rgba(58, 58, 58, 1);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.win-checkboxtile:focus .win-item .win-checkboxtile-checkbox {
+    background-color: transparent;
+}
+
+.win-checkboxtile-checked .win-checkboxtile-checkbox, .win-radiobuttontile-checked .win-radiobuttontile-radiobuttonbox {
+    background-color: rgb(235, 235, 235); /*XboxClr-VidoSafeWhite*/
+    color: rgba(16, 16, 16, 1); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-radiobuttontile-radiobuttonbox {
+    line-height: 45px;
+    border-radius: 50px;
+}
+
+.win-checkboxtile-checkbox::before {
+    font-family: "Segoe Xbox Symbol";
+    font-size: 18pt;
+    content: '\E3EE';
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+    opacity: 0;
+}
+
+.win-radiobuttontile-radiobuttonbox::before {
+    font-family: "Segoe UI Symbol";
+    font-size: 30pt;
+    content: '\26AB';
+    margin: 0 0 0 1px;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+    opacity: 0;
+}
+
+.win-checkboxtile-checked .win-checkboxtile-checkbox::before,
+.win-radiobuttontile-checked .win-radiobuttontile-radiobuttonbox::before {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+    opacity: 1;
+}
+
+.win-checkboxtile .win-text-tiletitle,
+.win-checkboxtile .win-voice-textdisplay,
+.win-radiobuttontile .win-text-tiletitle,
+.win-radiobuttontile .win-voice-textdisplay {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-align: center;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.win-disabled .win-checkboxtile-checkbox,
+.win-disabled .win-radiobuttontile-radiobuttonbox {
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+    border-color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-disabled.win-checkboxtile-checked .win-checkboxtile-checkbox,
+.win-disabled .win-radiobuttontile-checked .win-radiobuttontile-radiobuttonbox {
+    background-color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-disabled.win-checkboxtile .win-text-tiletitle,
+.win-disabled.win-radiobuttontile .win-text-tiletitle,
+.win-disabled.win-checkboxtile .win-item,
+.win-disabled.win-radiobuttontile .win-item {
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+/*=== Win Back Button Styles ===*/
+
+.win-backbutton {
+    display: inline-block;
+    min-width: 0;
+    min-height: 0;
+    background-clip: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(235, 235, 235, 0); /*XboxClr-VideoSafeWhite*/
+    padding-top: 1px;
+    text-align: center;
+    outline: none;
+    /* Normal sizing. */
+    width: 54px;
+    height: 54px;
+    font-size: 16pt;
+    line-height: 46px; /* line-height must match the content box height. */
+    vertical-align: baseline;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-property: border-color;
+}
+
+.win-backbutton::before {
+    font-family: "Segoe Xbox Symbol";
+    content: "\E3B5";
+}
+
+.win-gestureactive .win-backbutton {
+    border-color: rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+}
+
+button.win-navigation-backbutton, button.win-navigation-backbutton:active, 
+button.win-navigation-backbutton:hover, button.win-navigation-backbutton:active:hover {
+    display: inline-block;
+    padding: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    /* Overwrite default background and border styles from HTML button element */
+    background-color: transparent;
+    border: none;
+    /* Normal Sizing */
+    height: 54px;
+    width: 54px;
+    margin: 0 36px 0 0;
+    outline: none;
+}
+
+.win-backbutton, 
+.win-navigation-backbutton .win-backbutton {
+    border-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-backbutton:focus, 
+.win-navigation-backbutton:focus .win-backbutton {
+    background-color: rgba(235, 235, 235, 0.13); /*XboxClr-VideoSafeWhite*/
+}
+
+ .win-backbutton:hover, 
+.win-navigation-backbutton:hover .win-backbutton {
+    background-color: rgba(107, 107, 107, 0.15); /*XboxClr-Ui3*/
+}
+
+.win-backbutton:focus:hover, 
+.win-navigation-backbutton:hover .win-backbutton {
+    background-color: rgba(107, 107, 107, 0.15); /*XboxClr-Ui3*/
+
+}
+.win-backbutton:disabled, .win-backbutton:disabled:active,
+.win-navigation-backbutton:disabled, .win-navigation-backbutton:disabled:active {
+    display: none;
+}
+
+.win-voice-voicemodeactive button.win-navigation-backbutton {
+    overflow: visible;
+}
+
+.win-voice-disambiguationlistening .win-backbutton,
+.win-voice-activelistening .win-backbutton {
+    position: absolute;
+    top: 0px;
+}
+
+.win-voice-disambiguationlistening .win-backbutton-voiceactivation,
+.win-voice-activelistening .win-backbutton-voiceactivation {
+    position: absolute;
+    top: 62px;
+    left: -73px;
+    width: 200px;
+}
+
+:not(.win-voice-disambiguationlistening) .win-backbutton-voiceactivation,
+:not(.win-voice-activelistening) .win-backbutton-voiceactivation {
+    display: none;
+}
+
+.win-voice-disambiguationlistening .win-backbutton-voiceactivation {
+    display: inline;
+    color: rgb(252, 209, 22);
+}
+
+.win-voice-activelistening .win-backbutton-voiceactivation {
+    display: inline;
+    color: rgb(93, 194, 30); /*XboxClr-BrandGreenLightest*/
+}
+
+/* AppBar Control */
+.win-appbarclickeater, .win-flyoutmenuclickeater {
+    opacity: 1;
+    background-color: rgba(16, 16, 16, 0.7); /*XboxClr-VideoSafeBlack*/ 
+}
+
+.win-appbar {
+    z-index: 1002;
+    height: auto;
+    text-align: left;
+    -ms-touch-select: none;
+    width: 568px;
+    background-color: rgba(58, 58, 58, 0); /*XboxClr-Ui2*/ /*background transparent to enable the focused shadow.*/
+    padding: 40px; /*Padding to enable the focused shadow.*/
+}
+
+.win-appbar-header {
+    height: 136px;
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-rows: 26px 42px 1px 36px 1fr;
+    -ms-grid-columns: 18px 1fr 16px 140px;
+}
+
+.win-appbar .win-overlay-dismissoverlay {
+    -ms-grid-row-span: 4;
+    -ms-grid-column-span: 5;
+}
+
+.win-appbar-title {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(235,235,235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-appbar-subtitle {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(235,235,235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-appbar button.win-disabled {
+    background-color: rgb(72, 72, 72);
+    color: rgb(115, 115, 115);
+}
+
+.win-appbar button.win-command {
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgba(16, 16, 16, 0); /*XboxClr-VideoSafeblack*/
+    width: 568px;
+    height: 108px; /*height 108px is the value that includes the focused border.*/
+    outline-style: solid;
+    outline-width: 4px;
+    outline-color: rgba(235, 235, 235, 0); /*XboxClr-VideoSafeWhite*/
+    box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0); /*XboxClr-VideoSafeBlack*/ 
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property:outline-color background-color border-color box-shadow;
+}
+
+.win-appbar button.win-command:not(:focus) {
+    transition-duration: 0ms;
+}
+
+body:not(.win-visiblebutnotfocused) .win-appbar button.win-command:focus {
+    background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VideoSafeWhite*/
+    outline-color: rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+    border-color: rgba(16, 16, 16, 1); /*XboxClr-VideoSafeblack*/
+    box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0.8); /*XboxClr-VideoSafeBlack*/
+    transition-duration: 0ms; 
+}
+
+.win-appbar button.win-command .win-label {
+        color: rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+    }
+
+.win-appbar button.win-command:disabled .win-label {
+     color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+.win-gestureactive .win-appbar button:hover:not(:focus) {
+    border: solid 4px rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    outline: solid 4px rgba(107, 107, 107, 1); /*XboxClr-Ui3*/
+}
+
+.win-appbar button.win-command:active {
+    transition-duration: 0.115s;
+    box-shadow: inset 0 0 0 6px rgb(16, 16, 16);
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: box-shadow;
+}
+
+.win-appbar button.win-command .win-label {
+	max-width: 504px;
+    text-align: left;
+    font-size: 18pt;
+    line-height: 36pt;
+    font-weight: normal;
+    margin: 0px;
+    padding: 18px 0 0 18px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.win-appbar button.win-command .win-commandring {
+    display: none;
+}
+
+.win-appbar button.win-command .win-commandimage {
+    display: block;
+}
+
+/*  AppBarCommand separator. */
+.win-appbar hr.win-command {
+	padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 2px;
+    width: 568px;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    border: 0;
+}
+
+/* Overrides for the special "Go Back" button on the AppBar,
+   because it has different visuals than the other buttons. */
+.win-appbar-container .win-overlay-dismissoverlay {
+    border: 0px solid transparent;
+    width: 568px;
+}
+
+.win-gestureactive .win-appbar button.win-overlay-dismissoverlay,
+ {
+    background-color: transparent;
+    border: 0px solid transparent;
+    outline: none;
+    box-shadow: none;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/ 
+    }
+
+.win-gestureactive .win-appbar button.win-overlay-dismissoverlay:hover {
+    background-color: transparent;
+    border: 0px solid transparent;
+    outline: none;
+    box-shadow: none;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .win-appbar {    
+        width: 388px;
+    }
+
+    .win-appbar button.win-command {
+            width: 388px;
+        }
+
+    .win-appbar button.win-command .win-label {
+        max-width: 324px;
+    }
+
+    /*  AppBarCommand separator. */
+    .win-appbar hr.win-command {
+        width: 388px;
+    }
+
+    /* Overrides for the special "Go Back" button on the AppBar,
+   because it has different visuals than the other buttons. */
+    .win-appbar-container .win-overlay-dismissoverlay {
+        width: 388px;
+    }
+
+     .win-commandlayout.win-bottom {
+        writing-mode: lr-tb;
+    }
+
+    button.win-command .win-label {
+        display: block;
+    }
+}
+
+/*==========================*/
+
+/* Tab Control */
+.win-tabs-container {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    margin: 12px 0 0 0;
+    height: auto;
+    overflow: visible;
+}
+
+.win-tabview-tab-tabstop {
+    height: 64px;
+    margin-top: -8px;
+    margin-bottom: 0px;
+    background:transparent;
+}
+
+.win-tabview-tab-header-interactive .win-tabview-tab-header-content {
+    font-weight: 200;
+    border-bottom: solid 5px rgba(194, 194, 194, 0); /*XboxClr-Ui5*/
+}
+
+body:not(.win-visiblebutnotfocused) .win-tabview-tab-header-interactive:focus .win-tabview-tab-header-content {
+    font-weight: 200;
+    border-bottom: solid 5px rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-tab-currentselected .win-tabview-tab-header-interactive:focus .win-tabview-tab-header-content {
+    border-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-tab-viewport {
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+.win-tab-currentselected .win-tabview-tab-header-content {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-tabview-tab-content {
+    overflow: visible;
+}
+/* Hub Control */
+.win-hub-viewport {
+    margin-left: -18px;
+    margin-top: -18px;
+    width: calc(100% + 36px);
+    height: calc(100% + 36px);
+    -ms-overflow-style: none;
+}
+
+.win-hub-horizontal .win-hub-viewport {
+    overflow-x: auto;
+    overflow-y: auto;
+    -ms-touch-action: pan-x;
+}
+
+    /*So you can't jiggle the hub vertically with gesture*/
+    .win-gestureactive .win-hub-horizontal .win-hub-viewport {
+        overflow-y: hidden;
+    }
+
+    .win-hub-viewport > .win-hub-surface {
+        margin: 0 18px 36px 18px;
+    }
+
+
+.win-hub-section-header-content {
+    display: inline-block;
+    width: auto;
+    max-width: 424px;
+    margin: 32px 0 0 0;
+}
+
+.win-hub-horizontal .win-hub-viewport > .win-hub-surface {
+   padding-left: 0px;
+}
+
+/* This rule prevents non-interactive hub headers from being attractable */
+.win-hub-section-header-tabstop {
+    -ms-attraction: none;
+}
+
+.win-hub-section-header-tabstop.win-hub-section-header-interactive {
+    -ms-attraction: 0;
+}
+
+/* Hub Voice styles */
+.win-hub-previousnextvoicecontainer {
+    left: 0px; 
+    width: 100%;
+    height: 36px;
+    color: rgb(93, 194, 30); /*XboxClr-LightGreen*/
+    bottom: 0px;
+    position: absolute;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr;
+}
+
+.win-hub-previouspagelabel {
+    -ms-grid-column: 1;
+    -ms-grid-column-align: start;
+    margin-left: 136px;
+    opacity: 0;
+}
+
+.win-hub-nextpagelabel {
+    -ms-grid-column: 2;
+    -ms-grid-column-align: end;
+    margin-right: 136px;
+    opacity: 0;
+}
+
+.win-hub-previouspagelabel.win-voice-activelistening,
+.win-hub-nextpagelabel.win-voice-activelistening {
+    opacity: 1;
+}
+
+/* Hub Section */
+.win-hub-section {
+    padding: 0 0 0 0;
+    margin: 0 44px 0 0;
+}
+
+.win-hub-section-header {
+    margin-top: 22px;
+    height: 82px;
+}
+
+.win-hub-horizontal .win-hub-section-header {
+    margin-top: 22px;
+}
+
+.win-listpicker .win-flyout.win-ui-light,
+.win-ui-light .win-flyout {
+    height: auto;
+    max-height: 100%;
+}
+
+/*This class shows the flyout background-color.  */
+.win-listpicker-container {
+    height: calc(100vh - 236px);  
+    overflow: scroll;
+    -ms-overflow-style: none;
+    -ms-touch-action: none;
+    margin-left: -40px; 
+    margin-right: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+    .win-scrollable .win-listpicker-container {
+        -ms-touch-action: pan-y;
+    }
+
+.win-listpicker .win-overlay-contextindicator {
+    display: none;
+}
+
+.win-listpicker-overlay.win-ui-light.win-flyout {
+   padding-top: 0px;
+   padding-bottom: 20px;
+}
+/* The following classes override the default ItemContainer styles
+   so that the focus indicator doesn't get cut off in the ListPicker's
+   scrollable region. */
+
+.win-scrollviewer .win-itemcontainer,
+.win-overlay-container .win-itemcontainer {
+    border-top: 8px;
+    border-bottom: 8px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-color: transparent;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+.win-scrollviewer .win-itemcontainer .win-tile-focusindicator,
+.win-overlay-container .win-itemcontainer .win-tile-focusindicator {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    height: calc(100% - 16px);
+}
+
+.win-scrollviewer .win-itemcontainer .win-voice-host,
+.win-scrollviewer .win-itemcontainer .win-itemcontainer-captureproxy,
+.win-overlay-container .win-itemcontainer .win-voice-host,
+.win-overlay-container .win-itemcontainer .win-itemcontainer-captureproxy {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: calc(100% - 16px);
+}
+/* We need to give the divs a height otherwise they
+   will not be voice enabled. We accomplish this by using
+   a 1px border. */
+.win-overlay-dismissoverlay > .win-overlay-voice-command,
+.win-overlay-pageupindicator,
+.win-overlay-pagedownindicator {
+    border: 1px solid transparent;
+}
+
+.win-voice-voicemodeactive .win-overlay-scrollupindicator {
+    display: none;
+}
+
+.win-voice-voicemodeactive .win-overlay-scrolldownindicator {
+    display: none;
+}
+
+.win-overlay-scrollupindicator,
+.win-overlay-scrolldownindicator {
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+.win-listpicker .win-overlay-scrollupindicator,
+.win-listpicker .win-overlay-scrolldownindicator {
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+.win-overlay-scrollupindicator::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\1F53C';
+}
+
+.win-overlay-scrolldownindicator::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\1F53D';
+}
+
+.win-listpicker-overlay .win-overlay-arrowindicators {
+    display: none;
+}
+
+.win-listpicker-overlay .win-scrollable-up .win-overlay-arrowindicators,
+.win-listpicker-overlay .win-scrollable-down .win-overlay-arrowindicators {
+    -ms-grid-column: 3;
+    width: 64px;
+    height: 100%;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    padding-top: 50px;
+}
+
+.win-listpicker-overlay .win-overlay-pageupindicator {
+    -ms-grid-column: 2;
+}
+
+.win-listpicker-overlay .win-overlay-pagedownindicator {
+    -ms-grid-column: 3;
+    -ms-grid-column-align: end;
+}
+
+.win-voice-voicemodeactive .win-overlay-voice-command.win-overlay-pagedownindicator {
+    display: inline-block;
+}
+
+.win-voice-voicemodeactive .win-overlay-voice-command.win-overlay-pageupindicator {
+    display: inline-block;
+}
+
+.win-ui-light.win-flyout.win-listpicker-overlay {
+   margin-top: 0px;
+}
+
+
+
+.win-listpicker-buttonlabel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+
+.win-listpicker-selecteditemscountlabel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-row-align: end;
+    margin: 0 0 10px 10px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.win-listpicker-chevron {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-row-align: center;
+    -ms-grid-column: 2;
+    -ms-grid-column-align: end;
+    margin: 0 8px 0 0;
+}
+
+    .win-listpicker-chevron::before {
+        font-family: 'Segoe UI Symbol';
+        content: "\E019";
+        font-size: 24pt;
+    }
+
+.win-listpicker-overlay {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    overflow: hidden;
+}
+
+.win-listpicker-overlay-visible {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    z-index: 1008; /* same z-index as flyout */
+    padding: 0px 20px; /*padding left and right enables the item container focused shadow.*/
+    width: 424px;
+}
+
+.win-listpicker-overlay-hidden {
+    display: none;
+}
+
+.win-listpicker-item {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.win-listpicker-item:focus {
+    outline: none;
+    font-weight: 400;
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-tile-listbutton .win-listpicker-glyph {
+    -ms-grid-column: 2;
+    -ms-grid-row:2;
+    -ms-grid-row-align: center;
+}
+
+.win-tile-listbutton.win-listpicker-item-selected .win-listpicker-glyph::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E001';
+    margin-right: 10px;
+}
+
+.win-listpicker {
+    width: 424px;
+}
+
+.win-listpicker .win-tile-galleryheader .win-item,
+.win-listpicker .win-tile-galleryheader .win-voice-container {
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr auto;
+}
+
+.win-listpicker .win-tile-galleryheader .win-item {
+    width: 424px;
+}
+
+.win-listpicker .win-tile-galleryheader .win-text-tiletitle {
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.win-ui-light button {
+    background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    line-height: 18pt;
+    height: 100px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 18px;
+    top: auto;
+}
+
+body:not(.win-visiblebutnotfocused) .win-ui-light button:focus {
+    color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VidoSafeWhite*/
+}
+
+.win-ui-light button:not(focus):hover {
+    background-color: transparent;
+}
+
+.win-ui-light button:active, 
+.win-ui-light input[type=button]:active, 
+.win-ui-light input[type=reset]:active, 
+.win-ui-light input[type=file]::-ms-browse:active {
+    background-color: rgb(107, 107, 107);  /*XboxClr-Ui3*/
+}
+
+.win-ui-light button:hover:active, .win-ui-light button[type=submit]:hover:active,
+.win-ui-light input[type=button]:hover:active, .win-ui-light input[type=reset]:hover:active,
+.win-ui-light input[type=submit]:hover:active, .win-ui-light input[type=file]::-ms-browse:hover:active {
+    background-color: rgb(107, 107, 107);  /*XboxClr-Ui3*/
+}
+
+/*
+Text input, checkbox, radio, and select control colors.
+*/
+input[type=text], input[type=password],
+input[type=email], input[type=number],
+input[type=tel], input[type=url],
+input[type=search], textarea, .win-textarea,
+select, input::-ms-check {
+	background-clip: border-box;
+    background-color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+	border:solid; /*XboxClr-VideoSafeBlack*/
+	padding: 0;
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+input[type=text]:hover, input[type=password]:hover, 
+input[type=email]:hover, input[type=number]:hover, 
+input[type=tel]:hover, input[type=url]:hover,
+input[type=search]:hover, textarea:hover, 
+.win-textarea:hover, select:hover, input:hover::-ms-check {
+	background-clip: border-box;
+	color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	border-color: transparent;
+    border-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+	background-color: rgba(16, 16, 16,0.4); /*XboxClr-VideoSafeBlack*/
+}
+
+input:hover:active::-ms-check { /* only checkbox and radio have press state */
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+input:-ms-keyboard-active::-ms-check { /* only checkbox and radio have press state */
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+input[type=text]:focus,
+input[type=text]:active,
+input[type=password]:focus,
+input[type=password]:active,
+input[type=email]:focus,
+input[type=email]:active,
+input[type=number]:focus,
+input[type=number]:active,
+input[type=tel]:focus,
+input[type=tel]:active,
+input[type=url]:focus,
+input[type=url]:active,
+input[type=search]:focus,
+input[type=search]:active,
+textarea:focus,
+textarea:active,
+.win-textarea:focus,
+.win-textarea:active,
+select:focus,
+select:active {
+	background-clip: border-box;
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	border-color: transparent;
+	color: rgba(16, 16, 16, 0.93); /*XboxClr-VideoSafeBlack*/
+}
+
+input::selection {
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+	border-width: 0px;
+	border-style: none;
+}
+
+input[type=text]:disabled, input[type=password]:disabled,
+input[type=email]:disabled, input[type=number]:disabled,
+input[type=tel]:disabled, input[type=url]:disabled, 
+input[type=search]:disabled, input[type=file]::-ms-value,
+textarea:disabled, .win-textarea:disabled, select:disabled {
+	background-clip: border-box;
+	background-color: rgba(16, 16, 16, 0.098); /*XboxClr-VideoSafeBlack*/
+	border-color: rgba(16, 16, 16, 0.4); /*XboxClr-VideoSafeBlack*/
+	color: rgba(16, 16, 16, 0.4); /*XboxClr-VideoSafeBlack*/
+}
+
+input:disabled::-ms-check, input:disabled:active::-ms-check { /* checkbox and radio have filled disabled state in dark */
+	background-clip: border-box;
+	background-color: rgba(235, 235, 235, 0.4); /*XboxClr-VideoSafeWhite*/
+	border-color: transparent;
+	color: rgba(16, 16, 16, 0.4); /*XboxClr-VideoSafeBlack*/
+}
+
+/*
+Clear and reveal buttons.
+*/
+input::-ms-clear, input::-ms-reveal {
+    background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+	border: none;
+}
+
+input::-ms-clear:hover, input::-ms-reveal:hover {
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+	border: none;
+}
+
+input::-ms-clear:hover:active, input::-ms-reveal:hover:active {
+	background-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+	color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+	border: none;
+}
+
+/*
+Text input controls.
+*/
+
+input[type=text], input[type=password], input[type=email], input[type=number],
+input[type=tel], input[type=url], input[type=search], textarea, .win-textarea {
+	-ms-user-select: element;
+	min-height: 55px;
+	min-width: 250px;
+	margin-top: 4px;
+	margin-right: 0;
+	margin-bottom: 4px;
+	margin-left: 0;
+	border: none;
+	font-size: 18pt;
+	font-weight: 300;
+	line-height: normal;
+}
+
+
+/*
+Select control.
+*/
+select {
+    min-height: 32px;
+    min-width: 80px;
+    border: none;
+    margin: 4px 0;
+    font-size: 18pt;
+    line-height: normal;
+}
+
+select::-ms-value {
+    padding: 4px 8px;
+    margin: 0;
+}
+
+select::-ms-expand {
+    border: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: transparent;
+}
+
+/*
+Option for select control (all colors are same for both light and dark).
+*/
+option:checked,
+select:focus::-ms-value {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui5*/
+ }
+
+option:hover {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui5*/
+}
+
+select:focus option:hover {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui5*/
+}
+
+option:checked:hover, select:focus option:checked:hover {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui5*/
+}
+
+option:hover:active, select:focus option:hover:active {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui5*/
+}
+
+option:checked:disabled, option:checked:disabled:active,
+optgroup:disabled option:checked, optgroup:disabled option:checked:active,
+select:disabled option:checked, select:disabled option:checked:active,
+select:disabled:focus::-ms-value {
+    background-color: rgba(235, 235, 235, 0.4); /*XboxClr-VideoSafeWhite*/
+    color: rgba(16, 16, 16, 0.6); /*XboxClr-VideoSafeBlack*/
+}
+
+/* Menu Control */
+
+.win-ui-light.win-menu button, .win-ui-light .win-menu button {
+   color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+   height:100px;
+   width: 424px;
+}
+
+body:not(.win-visiblebutnotfocused) .win-ui-light.win-menu button:focus, 
+body:not(.win-visiblebutnotfocused) .win-ui-light .win-menu button:focus,
+.win-ui-light.win-menu button:active, 
+.win-ui-light .win-menu button:active {
+	color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    outline: solid 4px rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    border: solid 4px rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/ 
+    box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0.8); /*XboxClr-VideoSafeBlack*/ 
+}
+
+  .win-menu button.win-command:hover, 
+  .win-menu button.win-command:focus {
+	border-style: none;
+	border-width: 0px;
+	border-color: none;
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+  .win-menu {
+	padding: 0px 0px 0px 0px;
+	line-height: 30px;
+	text-align: left; /* Set explicitly in case our parent has different alignment, like appbar overflow. */
+	min-height: 30px; /* 54px - padding - border = 38px */
+	max-width: none;
+}
+
+  .win-menu button.win-command {
+	display: block;
+	border: none;
+	padding: 10px 10px 12px 18px;
+	margin-left: 0;
+	margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+	float: none;
+	text-align: left;
+	width: 100%;
+}
+
+  /*ListView check mark style*/
+.win-selectioncheckmark {
+    font-size: 24pt;
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder {
+    border-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+}
+
+.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder {
+    border-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+}
+
+.win-listview.win-selectionstylefilled .win-selected .win-selectionbackground {
+    background-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+}
+
+.win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
+    border-top-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+    border-right-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-width: 42px;
+}
+
+.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground {
+    border-top-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+    border-right-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.win-listview.win-rtl:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground {
+    border-left-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+    border-right-color: transparent;
+}
+
+.win-listview.win-rtl:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground {
+    border-left-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+    border-right-color: transparent;
+}
+
+:not(.win-voice-voicemodeactive) .win-horizontal.win-listview-voice-navigation {
+    visibility: hidden;
+    position: relative;
+    bottom: -45px;
+    width: 100%;
+    height: 36px;
+    margin-top: 0;
+}
+
+.win-voice-voicemodeactive .win-horizontal.win-listview-voice-navigation {
+    position: relative;
+    bottom: -45px;
+    width: 100%;
+    visibility: visible;
+    opacity: 1.0;
+    overflow-y: visible;
+    height: 36px;
+}
+
+:not(.win-rtl) .win-horizontal .win-listview-voice-navigation-left {
+    float: left;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.win-rtl .win-horizontal .win-listview-voice-navigation-left {
+    float: right;
+    text-align: right;
+    margin-right: 100px;
+}
+
+:not(.win-rtl) .win-horizontal .win-listview-voice-navigation-right {
+    float: right;
+    text-align: right;
+    margin-right: 100px;
+}
+
+.win-rtl .win-horizontal .win-listview-voice-navigation-right {
+    float: left;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.win-listview .win-overlay-arrowindicators {
+    display: none;
+}
+
+.win-listview .win-overlay-arrowindicators.win-vertical.win-scrollable-up,
+.win-listview .win-overlay-arrowindicators.win-vertical.win-scrollable-down {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    margin-top: 16px;
+}
+
+.win-scrollable-down .win-overlay-scrolldownindicator,
+.win-scrollable-up .win-overlay-scrollupindicator {
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-listpicker .win-scrollable-down .win-overlay-scrolldownindicator,
+.win-listpicker .win-scrollable-up .win-overlay-scrollupindicator {
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-voice-voicemodeactive .win-listview .win-overlay-arrowindicators.win-vertical.win-scrollable-up,
+.win-gestureactive .win-listview .win-overlay-arrowindicators.win-vertical.win-scrollable-down {
+    display: none;
+}
+
+/* The "next page" is always green. It never shows up when voice is not engaged */
+.win-listview-voice-navigation-left,
+.win-listview-voice-navigation-right {
+    display: inline-block;
+    color: rgb(93, 194, 30); /*XboxClr-BrandGreenLightest*/
+}
+
+.win-listview-voice-navigation-left.win-voice-disabledlabel,
+.win-listview-voice-navigation-right.win-voice-disabledlabel {
+    color: rgb(107, 107, 107); /*XboxClr-BrandGreenLighter*/
+}
+
+.win-vertical.win-listview-voice-navigation {
+    visibility: hidden;
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: auto 1fr auto;
+}
+
+.win-voice-voicemodeactive .win-vertical.win-listview-voice-navigation {
+    visibility: visible;
+    overflow-x: visible;
+}
+
+.win-vertical .win-listview-voice-navigation-left {
+    -ms-grid-column: 1;
+}
+
+.win-vertical .win-listview-voice-navigation-right {
+    -ms-grid-column: 3;
+}
+
+/*
+Flyout control.
+*/
+/*need alpha on background to overwrite previous value*/
+.win-flyout.win-ui-light, .win-ui-light .win-flyout {
+    background-color: rgba(58, 58, 58, 0); /*XboxClr-Ui2*/ /*background transparent to enable the focused shadow.*/
+    border: none;
+    width: 424px;
+    padding: 40px; /*Padding to enable the focused shadow.*/
+    margin: -20px; /*Margin is defined for the flyout background position.*/ 
+}
+
+/*".win-listpicker .win-flyout" class must after ".win-flyout.win-ui-light, .win-ui-light .win-flyout" otherwise, ".win-listpicker .win-flyout" will overwrite.*/
+.win-listpicker .win-flyout {
+    background-color: rgba(58, 58, 58, 0); /*XboxClr-Ui2*/ /*background transparent to enable the focused shadow.*/
+    border: none;
+    width: 424px;
+    margin-left: -464px;  /* -466px = -1 * (424px (width of the flyout) + 16px (width of the flyout triangle widget which is not shown in the case of filer / sort) + 24px (reserved for the focued shadow)) */
+    margin-bottom: 0px; /*Margin is defined for the flyout background position.*/
+}
+
+.win-flyout {
+    z-index: 1008;
+    margin: 5px;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+    word-wrap: normal;
+    -ms-touch-select: none;
+    font-size: 18pt;
+    font-weight: 400;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    line-height: normal; /* 45pt when font-size is 30pt */
+    overflow: hidden;
+    position:-ms-page;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .win-listpicker, .win-listpicker .win-tile-galleryheader .win-item {
+        width: 388px;
+    }
+
+    .win-listpicker .win-flyout {
+        width: 388px;
+        margin-left: -432px;
+    }
+}
+
+/*
+Media Player.
+*/
+
+.win-mediaplayer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.win-mediaplayer-container { 
+    display: -ms-grid; 
+    -ms-grid-rows: 1fr; 
+    -ms-grid-columns: 1fr; 
+    height: 100%; 
+    width: 100%; 
+}
+ 
+.win-mediaplayer-video { 
+    height: 100%; 
+    width: 100%; 
+    -ms-grid-column-align:center; 
+    -ms-grid-row-align:center; 
+}
+
+.win-mediaplayer-fullscreen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+    .win-mediaplayer-fullscreen .win-mediaplayer-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+.win-mediaplayer-seekbar-disabled {
+    color: rgb(139, 139, 139);
+}
+
+.win-mediaplayer-controls {
+    display: -ms-grid;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-rows: 60px 50px 1fr 208px 43px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-columns: 100px 107px 1fr 100px;
+    width: 100%;
+    height: 100%;
+    background-image: -ms-linear-gradient(bottom, rgba(16,16,16, .6) 15%, rgba(16,16,16, 0) 50%, rgba(16,16,16, .7) 85%);
+}
+
+.win-mediaplayer-timeline {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 100px 1fr 100px;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span:4;
+    -ms-grid-row-align: end;
+    height: 50px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+    .win-mediaplayer-fastforward .win-mediaplayer-playbackspeedindicator::before {
+        font-family: 'Segoe Xbox Symbol';
+        content: '\E44B';
+    }
+
+    .win-mediaplayer-rewind .win-mediaplayer-playbackspeedindicator::before {
+        font-family: 'Segoe Xbox Symbol';
+        content: '\E44C';
+    }
+
+.win-mediaplayer-information {
+    -ms-grid-row: 1;
+    margin-top: 50px;
+    height: 200px;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.win-mediaplayer-mediatitle {
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+    height: 60px;
+    width: 65vw;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    margin-bottom: -10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.win-mediaplayer-mediadescription {
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+    width: 45vw;
+    height: 150px;
+    overflow: hidden;
+    word-wrap: normal;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer > .win-navigation-backbutton {
+    position: absolute;
+    top: 66px;
+    left: 100px;
+    opacity: 0;
+}
+
+.win-voice-voicemodeactive .win-mediaplayer > .win-navigation-backbutton,
+.win-gestureactive .win-mediaplayer > .win-navigation-backbutton {
+    opacity: 1;
+}
+
+/* We make the back button hit target bigger in the case of the MediaPlayer, because
+   the video region is a hit target and it is hard for the user not to be able to press
+   the back button as a result. */
+.win-mediaplayer .win-backbutton-attractionregion {
+    height: 200px;
+    width: 300px;
+    -ms-attraction: 50% 51% 50% 38%;
+}
+
+/* The indefinite progress indicator displayed while media is loading */
+progress.win-mediaplayer-busy {
+    position: absolute;
+    top: calc(50% - 30px); /*30px = height of the progress ring / 2*/ 
+    left: calc(50% - 30px); /*30px = width of the progress ring / 2*/
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer-fullscreen progress.win-mediaplayer-busy {
+    position: absolute;
+    top: calc(50% - 80px); /*80px = height of the progress ring / 2*/ 
+    left: calc(50% - 80px); /*80px = width of the progress ring / 2*/
+    height: 160px;
+    width: 160px; 
+}
+
+/*=== Back button needs ui-dark styles in media player ===*/
+
+.win-mediaplayer .win-backbutton {
+    color: rgb(235, 235, 235);
+    border-color: rgba(235, 235, 235, 0); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-gestureactive .win-mediaplayer .win-backbutton {
+    border-color: rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer .win-backbutton:focus, 
+.win-mediaplayer .win-navigation-backbutton:focus .win-backbutton {
+    background-color: rgba(235, 235, 235, 0.13); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer-transportcontrols {
+    display: -ms-grid;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column-align: center;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto;
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+}
+
+.win-mediaplayer-transportcontrols .win-tile-focusindicator {
+    display: none;
+}
+
+/* This is for the primary actions on the transport controls */
+.win-mediaplayer-transportcontrols-primary {
+    display: -ms-inline-flexbox;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-direction: row; 
+    background-color: transparent;
+    width: 100%;
+}
+
+/* This is for secondary actions on the transport controls */
+.win-mediaplayer-transportcontrols-secondary {
+    display: none;
+}
+
+/* We use the least specific CSS rule possible so that the
+   CSS rule a developer has to write to show the button is
+   as simple as possible. All of the non-custom button on
+   the transport control have this style. */
+.win-mediaplayer-transportcontrols-builtinbutton {
+    display: none;
+}
+
+.win-mediaplayer-transportcontrols button {
+    height: 208px;
+    width: 208px;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-color: rgba(235, 235, 235, 0); /*XboxClr-VideoSafeWhite*/
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgba(16, 16, 16, 0); /*XboxClr-VideoSafeblack*/
+    box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0); /*XboxClr-VideoSafeBlack*/ 
+    background-color: rgba(235, 235, 235, 0);
+    transition-property: margin-left margin-right outline-color background-color border-color box-shadow;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    position: relative;
+}
+
+    .win-mediaplayer-transportcontrols button .win-mediaplayer-icon {
+         font-size: 19pt;
+        line-height: 20pt;
+        font-weight: 600;
+        color: rgba(235, 235, 235, 0.5);
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 100ms;
+        transition-timing-function: linear;
+    }
+
+.win-mediaplayer-transportcontrols button:hover {
+    background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VideoSafeWhite*/
+    outline-color: rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+    border-color: rgba(16, 16, 16, 1); /*XboxClr-VideoSafeblack*/
+    box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0.8); /*XboxClr-VideoSafeBlack*/
+    transition-duration: 0ms;
+}
+
+    .win-mediaplayer-transportcontrols button:hover .win-mediaplayer-icon  {
+        color: rgba(235, 235, 235, 1);
+    }
+
+    
+    .win-mediaplayer-transportcontrols button:disabled .win-mediaplayer-icon  {
+        color: rgba(235, 235, 235, 0.2);
+    }
+
+    .win-mediaplayer-transportcontrols button .win-mediaplayer-icon {
+        transform-origin: center 12px;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 100ms;
+        transition-timing-function: linear;
+    }
+
+    .win-mediaplayer-controls button {
+        margin: 0 4px;
+    }
+
+body:not(.win-visiblebutnotfocused) .win-mediaplayer-transportcontrols button:focus .win-mediaplayer-icon {
+    transform: scale(2);
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    color: rgba(235, 235, 235, 1);
+}
+
+.win-mediaplayer-transportcontrols button:disabled {
+    color: rgba(235, 235, 235, 0.4); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer-transportcontrols button:active {
+    background-color: transparent;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer-transportcontrols button.win-mediaplayer-transportbarbutton-active .win-mediaplayer-icon {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    color: rgba(235, 235, 235, 1);
+}
+
+.win-mediaplayer-transportcontrols button .win-voice-activetext {
+    display: block;
+    height: auto;
+    max-height: 66px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    line-height: 1.3636;
+}
+
+.win-mediaplayer-progresscontainer {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-align: center;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+    width: 100%;
+    height: 2px;
+    margin-top: 28px;
+    transform-origin: left center;
+}
+
+.win-mediaplayer-seekbar {
+    -ms-grid-column-span:3; 
+    -ms-grid-column-align: start;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(194, 194, 194, 0.35); /*XboxClr-Ui5*/
+}
+
+.win-mediaplayer-seekprogress {
+    background-color: rgb(16, 124, 16); /*XboxClr-BrandGreen*/
+    height: 2px;
+    width: 100%;
+    -ms-transform-origin: left;
+}
+
+.win-mediaplayer-seekbar-disabled .win-mediaplayer-seekprogress {
+    background-color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+.win-mediaplayer-progresscontainer {
+    transform: scaleX(1);
+}
+
+.win-mediaplayer-currenttimeindicator {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: end;
+    line-height: 36px;
+    margin-top: 8px;
+    font-size: 18pt;
+    display: inline-block;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer-totaltimeindicator {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-align: end;
+    line-height: 36px;
+    padding-left: 8px;
+    margin-right: 0px;
+    margin-top: 8px;
+    text-align: right;
+    font-size: 18pt;
+    width: auto;
+    display: inline-block;
+    color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+}
+
+    .win-mediaplayer-timeremainingindicator {
+        display: inline-block;
+        font-size: 24px;
+        color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+        width: 10px;
+    }
+    
+    .win-mediaplayer-chaptermarker {
+        background-color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+        background-clip: border-box;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-width: 2px;
+        border-style: solid;
+        height: 10px;
+        width: 10px;
+        -ms-grid-column: 1;
+        border-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+        margin-top: -4px;
+    }
+
+    .win-mediaplayer-advertisementmarker {
+        background-color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+        background-clip: border-box;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-width: 2px;
+        border-style: solid;
+        height: 10px;
+        width: 10px;
+        -ms-grid-column: 1;
+        border-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+        margin-top: -4px;
+    }
+
+    .win-mediaplayer-inputfeedback {
+        -ms-grid-row: 4;
+        background: #333;
+        text-align: center;
+        visibility: hidden;
+    }
+
+    .win-mediaplayer-thumb {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+        position: absolute;
+        margin-top: -56px;
+        height: 30px;
+        width: 30px;
+        margin-left: -15px;
+        display: -ms-grid;
+        transform: rotate(45deg);
+    }
+
+        .win-mediaplayer-thumb.win-mediaplayer-fastforward {
+            transition-property: transform;
+            transition-duration: 100ms;
+            transition-timing-function: linear;
+        }
+
+    /* We hide the FF/RR speed indicator during scrubbing */
+    .win-mediaplayer-scrubbing .win-mediaplayer-playbackspeedindicator {
+        display: none;
+    }
+
+    .win-mediaplayer-scrubbing .win-mediaplayer-currenttimeindicator {
+        -ms-grid-column: 2;
+        -ms-grid-column-align: center;
+    }
+
+.win-mediaplayer-seek-leftboundary,
+.win-mediaplayer-seek-rightboundary {
+    height: 10px;
+    width: 4px;
+    /* We override the color of the seek boundaries in the light theme, because
+       the color is inherited from the default text color and in the light theme
+       that color is black. We don't want the seek boundaries to be black, because
+       that will make them hard to see. */
+    color: rgb(235, 235, 235);
+    background-color: rgb(235, 235, 235);
+    top: -4px;
+    position: absolute;
+}
+
+    .win-mediaplayer-thumbvisual {
+        transform-origin:center center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: -ms-linear-gradient(top left, rgba(235, 235, 235, 0) 0%,  rgba(235, 235, 235, 0) 50%,  rgba(16, 16, 16, 0.7) 50.1%, rgba(16, 16, 16, 0.7) 100%);
+    }
+
+    .win-mediaplayer-thumbnail-lefttriangle .win-mediaplayer-thumbvisual {
+        left: 15px; 
+        top: 12px;
+        background-image: -ms-linear-gradient(-45deg, rgba(16, 16, 16, 0.7) 0%, rgba(16, 16, 16, 0.7) 50%, rgba(235, 235, 235, 0) 50%, rgba(235, 235, 235, 0) 100%);
+    }
+
+    .win-mediaplayer-thumbnail-righttriangle .win-mediaplayer-thumbvisual {
+        left: -2px; 
+        top: 8px; 
+        background-image: -ms-linear-gradient(-135deg, rgba(16, 16, 16, 0.7) 0%, rgba(16, 16, 16, 0.7) 50%, rgba(235, 235, 235, 0) 50%, rgba(235, 235, 235, 0) 100%);
+    }
+
+    .win-mediaplayer-thumbnailmode .win-mediaplayer-thumbvisual {
+        background-image: -ms-linear-gradient(top left, rgba(235, 235, 235, 0) 0%,  rgba(235, 235, 235, 0) 50%,  rgba(235, 235, 235, 1) 50.1%, rgba(235, 235, 235, 1) 100%);
+    }
+
+    .win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnail-lefttriangle .win-mediaplayer-thumbvisual {
+        left: 15px;
+        top: 4px;
+        background-image: -ms-linear-gradient(-45deg, rgba(235, 235, 235, 1) 0%, rgba(235, 235, 235, 1) 50%, rgba(235, 235, 235, 0) 50%, rgba(235, 235, 235, 0) 100%);
+    }
+
+    .win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnail-righttriangle .win-mediaplayer-thumbvisual {
+        left: -2px;
+        top: 0px;
+        background-image: -ms-linear-gradient(-135deg, rgba(235, 235, 235, 1) 0%, rgba(235, 235, 235, 1) 50%, rgba(235, 235, 235, 0) 50%, rgba(235, 235, 235, 0) 100%);
+    }
+
+.win-mediaplayer-thumb.win-mediaplayer-hidden .win-mediaplayer-thumbvisual {
+    opacity: 0;
+    transform: scale(1, 0.3);
+    transition-property: opacity transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+}
+
+.win-mediaplayer-thumb:not(.win-mediaplayer-hidden) .win-mediaplayer-thumbvisual {
+    opacity: 1;
+    transform: scale(1,1);
+    transition-property: opacity transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+}
+    
+    .win-mediaplayer-inputhandler {
+        -ms-touch-action: none;
+        background-color: rgba(16, 16, 16, 0); /*XboxClr-VideoSafeBlack*/
+        /* 220px is the height of the buttons, the input handler needs to stop just before
+           the buttons otherwise the user cannot click the transport bar buttons with gesture */
+        height: calc(100% - 220px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -ms-attraction: 0;
+    }
+
+    /* We increase the height of the input handler if the user is scrubbing */
+    .win-mediaplayer-scrubbing .win-mediaplayer-inputhandler {
+        height: calc(100%);
+    }
+
+.win-mediaplayer-thumbnail {
+    height: 64px;
+    width: 208px;
+    margin-top: -105px;
+    margin-left: -104px;
+    position: absolute;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+}
+
+    .win-mediaplayer-thumbnail.win-mediaplayer-fastforward {
+        transition-property: transform;
+        transition-duration: 100ms;
+        transition-timing-function: linear;
+    }
+
+.win-mediaplayer-scrubbing .win-mediaplayer-thumbnail {
+    margin-left: -50px;
+    width: 100px;
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnail {
+    height: 64px;
+    width: 344px;
+    margin-top: -65px;
+    margin-left: -202px;
+}
+
+.win-mediaplayer-thumbnailvisual {
+    background-color: rgba(16, 16, 16, 0.7); /*XboxClr-VideoSafeBlack*/
+    border-width: 0px;
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    height: 100%;
+    width: 100%;
+     display: -ms-grid;
+    -ms-grid-rows: 1fr auto 1fr;
+    -ms-grid-columns: auto 1fr auto;
+    transform-origin: bottom center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnailvisual {
+    -ms-grid-columns: 1fr auto 1fr;
+    -ms-grid-rows: auto 1fr auto;
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnail {
+    background-color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+    border: 4px solid rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnail {
+    height: 218px;
+    margin-top: -264px;
+    width: 400px;
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-thumbnailvisual {
+    background-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    box-shadow: inset 0 0 0 4px rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/ 
+}
+
+.win-mediaplayer-thumbnail.win-mediaplayer-hidden .win-mediaplayer-thumbnailvisual {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+    transition-property: opacity transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+}
+
+.win-mediaplayer-thumbnail:not(.win-mediaplayer-hidden) .win-mediaplayer-thumbnailvisual {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1, 1);
+    transition-property: opacity transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+}
+
+.win-mediaplayer-seektimeindicator {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    margin-left: 12px;
+    font-size: 18pt;
+    text-align: left;
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-seektimeindicator {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    margin-bottom: 9px;
+    margin-left: 0px;
+    font-size: 18pt;
+}
+
+.win-mediaplayer-scrubbing .win-mediaplayer-seektimeindicator {
+    -ms-grid-column: 2;
+    margin: 0px;
+    text-align: center;
+}
+
+.win-mediaplayer-seek-mark {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    background-clip: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    position: absolute;
+    margin-top: -7px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(16, 124, 16); /*XboxClr-BrandGreen*/
+    margin-left: -7px;
+}
+
+.win-mediaplayer-seekbar-disabled .win-mediaplayer-seek-mark {
+    background-color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+.win-mediaplayer-playbackspeedindicator {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-align: end;
+    margin-right: 16px;
+    font-size: 18pt;
+}
+
+.win-mediaplayer-thumbnailmode .win-mediaplayer-playbackspeedindicator {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-align: end;
+    margin-bottom: 12px;
+}
+
+.win-mediaplayer-seek-mark {
+    transition-property: opacity;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+}
+
+.win-mediaplayer-fullscreen.win-mediaplayer-scrubbing .win-mediaplayer-seek-mark::after {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E448';
+    font-size: 48pt;
+    color: white;
+    opacity: 0.3;
+    top: -48px;
+    left: -37px;
+    position: absolute;
+}
+
+.win-mediaplayer-fullscreen:not(.win-mediaplayer-scrubbing) .win-mediaplayer-seek-mark::after {
+    opacity: 0;
+}
+
+.win-mediaplayer-chapterskipbackicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E403';
+}
+
+.win-mediaplayer-chapterskipforwardicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E402';
+}
+
+.win-mediaplayer-fastforwardicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E44B';
+}
+
+.win-mediaplayer-rewindicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E44C';
+}
+
+.win-mediaplayer-timeskipbackicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E44F';
+}
+
+.win-mediaplayer-timeskipforwardicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E44E';
+}
+
+.win-mediaplayer-pauseicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E40C';
+}
+
+.win-mediaplayer-playicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E40D';
+}
+
+.win-mediaplayer-previoustrackicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E403';
+}
+
+.win-mediaplayer-nexttrackicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E402';
+}
+
+.win-mediaplayer-infoicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E406';
+}
+
+.win-mediaplayer-stopicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E407';
+}
+
+.win-mediaplayer-replayicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E3C0';
+}
+
+.win-mediaplayer-moreicon::before {
+    font-family: "Segoe Xbox Symbol";
+    content: '\E34B'; 
+}
+
+.win-mediaplayer-snappedicon::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\E1D9';
+}
+
+.win-mediaplayer-closedcaptionsicon::before {
+    font-family: "Segoe Xbox Symbol";
+    content: '\E437';
+}
+
+.win-mediaplayer-oneguideicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E333';
+}
+
+.win-mediaplayer-displaymodeicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E415';
+}
+
+.win-mediaplayer-liveicon::before {
+    font-family: 'Segoe Xbox Symbol';
+    content: '\E44A';
+}
+
+
+/* Button visibility for WinJS.UI.Media.layout.partial */
+.win-mediaplayer-video-partial .win-mediaplayer-fastforwardbutton {
+    display: inline;
+}
+
+
+.win-mediaplayer-video-partial .win-mediaplayer-playpausebutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-partial .win-mediaplayer-rewindbutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-partial .win-mediaplayer-snapped-overlay  {
+    display: inline;
+}
+
+/* Button visibility for WinJS.UI.Media.layout.full */
+.win-mediaplayer-video-full .win-mediaplayer-closedcaptionsbutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-fastforwardbutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-playpausebutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-rewindbutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-snapped-overlay  {
+    display: none;
+}
+
+/* Button visibility for WinJS.UI.Media.layout.partial */
+.win-mediaplayer-audio-partial .win-mediaplayer-playpausebutton {
+    display: inline;
+}
+
+.win-mediaplayer-audio-partial .win-mediaplayer-snapped-overlay  {
+    display: none;
+}
+.win-mediaplayer-audio-full .win-mediaplayer-nexttrackbutton {
+    display: inline;
+}
+
+.win-mediaplayer-audio-full .win-mediaplayer-playpausebutton {
+    display: inline;
+}
+
+.win-mediaplayer-audio-full .win-mediaplayer-previoustrackbutton {
+    display: inline;
+}
+
+.win-mediaplayer-audio-full .win-mediaplayer-snapped-overlay  {
+    display: none;
+}
+
+/* Button visibility for linear media */
+.win-mediaplayer-linearmedia .win-mediaplayer-oneguidebutton {
+    display: inline;
+}
+
+/* We don't show the information UI in audio mode */
+.win-mediaplayer-audio-partial, .win-mediaplayer-audio-full .win-mediaplayer-information {
+    display: none;
+}
+
+@media screen and (-ms-view-state: filled) {
+    .win-mediaplayer-transportcontrols button {
+        height: 172px;
+        width: 172px;
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+/* Button Visibility Overrides */
+.win-mediaplayer-video-full .win-mediaplayer-stopbutton {
+   display: none;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-closedcaptionsbutton {
+    display: none;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-fastforwardbutton {
+    display: none;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-playpausebutton {
+    display: inline;
+}
+
+.win-mediaplayer-video-full .win-mediaplayer-rewindbutton {
+    display: none;
+}
+
+.win-mediaplayer-container {
+        -ms-grid-columns: 28px 1fr 64px;
+        -ms-grid-rows: 104px 173px auto 1fr;
+        display: -ms-grid;
+        height: 1080px;
+        margin-top: 0px;
+        width: 480px;
+}
+
+    .win-mediaplayer > .win-navigation-backbutton {
+        position: absolute;
+        top: 40px;
+        left: 36px;
+        display: inline;
+    }
+
+    .win-mediaplayer .win-backbutton-attractionregion {
+        -ms-attraction: 35% 75% 65% 15%;
+    }
+
+.win-mediaplayer-transportcontrols .win-mediaplayer-gotofullscreenbutton {
+    display: inline;
+}
+
+    .win-mediaplayer-controls {
+        background: none;
+    }
+
+     .win-mediaplayer-snapped-overlay {
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
+        visibility: visible;
+        height: 100%;
+    }
+
+       .win-mediaplayer-fullscreen {
+        height: 1080px;
+        width: 480px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: -ms-grid;
+        -ms-grid-rows: 287px 332px 1fr;
+        -ms-grid-columns: 1fr;
+     }
+
+    .win-mediaplayer {
+        -ms-grid-row-span: 3;
+    }
+     
+     .win-mediaplayer-fullscreen .win-mediaplayer-video {
+         -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        position: relative;
+        height: 100%;
+        width: 100%;
+     }
+
+    .win-mediaplayer-timeline {
+        display: none;
+    }
+
+    .win-mediaplayer-progresscontainer {
+        display: none;
+    }
+
+    .win-mediaplayer-inputfeedback {
+        display: none;
+    }
+    .win-mediaplayer-thumb {
+        display: none;
+    }
+
+    .win-mediaplayer-seekbar {
+        display: none;   
+    }
+
+    .win-mediaplayer-seekprogress {
+        background-color: rgb(16, 124, 16); /*XboxClr-BrandGreen*/
+        width: 100%;
+        height: 6px;
+    }
+
+    .win-mediaplayer-currenttimeindicator {
+        -ms-grid-column: 1;
+        -ms-grid-column-align: start;
+        line-height: 24px;
+        margin-top: 24px;
+        border: none;
+    }
+
+    .win-mediaplayer-totaltimeindicator {
+        -ms-grid-column: 2;
+        line-height: 24px;
+        margin-top: 24px;
+    }
+    
+    .win-mediaplayer-controls {
+        background-color: transparent;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+        -ms-grid-columns: 1fr;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 3;
+        -ms-grid-rows: 44px 0px 96px 332px 294px 172px 38px;
+        background-color: transparent;
+        display: -ms-grid;
+        height: 100%;
+        margin-top: 0px; 
+        width: 100%;
+    }
+
+    .win-mediaplayer-information {
+       -ms-grid-column: 2;
+       -ms-grid-row: 3;
+       -ms-grid-row-align: end;
+       height: 100%;
+       margin: 0px;
+       width: 388px;
+    }
+
+    .win-mediaplayer-mediatitle {
+       color: rgb(235, 235, 235);
+       font-size: 30pt;
+       height: 96px;
+       width: 100%;
+       overflow: hidden;
+       margin-left: 0px;
+       padding-left: 0px;
+       	font-size: 22pt;
+	   font-weight: 300;
+       -ms-grid-column: 1;
+       -ms-grid-row: 3;
+       text-overflow: clip;
+       white-space: normal;
+    }
+
+    .win-mediaplayer-mediadescription {
+       -ms-grid-row: 5;
+       -ms-grid-column: 1;
+       color: rgb(235, 235, 235);
+       font-size: 18pt;
+       height: auto;
+       width: 100%;
+       line-height: 1.5;
+       max-height: 180px;
+       overflow: hidden;
+       word-wrap: normal;
+       margin-top: 20px;
+    }
+
+    .win-mediaplayer-transportcontrols {
+       -ms-grid-column: 1;
+       -ms-grid-column-span: 1;
+       -ms-grid-column-align: start;
+       -ms-grid-row: 6;
+       -ms-grid-row-align: end;
+       -ms-grid-row-span: 1;
+       -ms-grid-rows: 1fr;
+       background-color: transparent;
+       display: -ms-grid;
+       height: auto;
+       margin-bottom: 0px;
+       margin-top: 0px;
+       margin-left: -4px;
+       width: 100%;
+       padding-bottom: 0px;
+    }
+    
+    .win-mediaplayer-transportcontrols-primary {
+        display: -ms-inline-flexbox;
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-align: start;
+        -ms-flex-pack: start;
+        -ms-flex-direction: row;
+        width: 100%;
+    }
+
+     .win-mediaplayer-transportcontrols-secondary {
+        display: none;
+    }
+
+    .win-mediaplayer-transportcontrols-primary .win-mediaplayer-snapped-overlay {
+        display: inline-block;
+    }
+
+   .win-mediaplayer-morebutton {
+        display: none;
+    }
+
+    .win-mediaplayer-transportcontrols button {
+        width: 172px;
+        height: 172px;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: rgba(34, 34, 34, 0.3); /*XboxClr-Ui1*/
+    }
+
+         body:not(.win-visiblebutnotfocused) .win-mediaplayer-transportcontrols button:focus {
+            outline: solid 4px rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+            border: solid 4px rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+            box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0.8); /*XboxClr-VideoSafeBlack*/
+            transform: scale(1.0);
+        }
+
+    body:not(.win-visiblebutnotfocused) .win-mediaplayer-transportcontrols button:focus .win-mediaplayer-icon {
+        transform: scale(1);
+    }
+
+    .win-mediaplayer-transportcontrols button:disabled {
+        color: rgba(235, 235, 235, 0.4); /*XboxClr-VideoSafeWhite*/
+    }
+
+    .win-mediaplayer-transportcontrols button.win-mediaplayer-transportbarbutton-active .win-mediaplayer-icon {
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 100ms;
+        transition-timing-function: ease-out;
+    }
+
+    .win-mediaplayer-fullscreen progress.win-mediaplayer-busy {
+        height: 100px;
+        width: 100px;
+        left: calc(50% - 50px);
+    }
+}
+
+.win-mediaplayer-hidden {
+    display: none;
+}
+
+/*
+ScrollViewer.
+*/
+.win-invisible {
+    visibility: hidden;
+}
+
+.win-scrollviewer {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 50px;
+    -ms-grid-columns: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.win-scrollviewer-scrollmode-text .win-scrollviewer-contentelement {
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgba(16, 16, 16, 0); /*XboxClr-VideoSafeblack*/
+    background-color: rgba(235, 235, 235, 0); /*XboxClr-VideoSafeWhite*/
+    padding-right: 24px;
+    padding-left: 0;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: border-color padding;
+}
+
+body:not(.win-visiblebutnotfocused) .win-scrollviewer-scrollmode-text .win-scrollviewer-contentelement:focus {
+    border-color: rgba(16, 16, 16, 1); /*XboxClr-VideoSafeblack*/
+    transition-duration: 100ms;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.win-scrollviewer-scrollmode-text.win-scrollable .win-scrollviewer-contentelement:hover:not(:focus) {
+    border-color: rgba(107, 107, 107, 1); /*XboxClr-Ui3*/
+}
+
+.win-scrollviewer-scrollmode-text .win-scrollviewer-contentelement:active {
+    background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VideoSafeWhite*/
+    transition-duration: 0.467s;
+    box-shadow: inset 0 0 0 10px rgb(16, 16, 16);
+    transition-timing-function: cubic-bezier(0.84, 0, 1, 0.32);
+    transition-property: box-shadow;
+}
+
+.win-scrollviewer .win-scrollindicator {
+    -ms-grid-row: 2;
+    -ms-grid-row-align: end;
+    display: -ms-grid;
+    -ms-grid-rows: 50px 50px;
+    -ms-grid-columns: 16px 1fr 1fr 16px;
+}
+
+.win-scrollviewer .win-overlay-arrowindicators {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+}
+
+/* If the text is not scrollable we don't show the arrows. */
+.win-scrollviewer .win-overlay-arrowindicators {
+    visibility: hidden;
+}
+
+/* But if there is scrollable content, then we do show the arrows. */
+.win-scrollable .win-scrollable-up .win-overlay-arrowindicators,
+.win-scrollable .win-scrollable-down .win-overlay-arrowindicators {
+    visibility: visible;
+}
+
+/* The ScrollViewer in list most does not show the scroll bars */
+.win-scrollviewer-scrollmode-list .win-scrollviewer-contentelement {
+    -ms-overflow-style: none;
+}
+
+/* Voice Styles */
+.win-overlay-voiceindicators {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    height: 100%;
+    display: none;
+}
+
+.win-scrollable .win-overlay-voiceindicators {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 0px 1fr;
+    -ms-grid-rows: 1fr;
+    height: 100%;
+}
+
+.win-scrollviewer.win-scrollable .win-overlay-voiceindicators {
+    -ms-grid-row-span: 2;
+}
+
+.win-overlay-voiceindicators .win-overlay-pageupindicator {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-align: center;
+}
+
+.win-overlay-voiceindicators .win-overlay-pagedownindicator {
+    -ms-grid-column: 3;
+    -ms-grid-column-align: end;
+    -ms-grid-row-align: center;
+}
+
+.win-scrollviewer .win-overlay-voice-command {
+    -ms-grid-row-align: end;
+    margin: 0 16px 0 16px;
+    line-height: 36px;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.win-scrollviewer .win-scrollviewer-contentelement:focus {
+    outline: none;
+}
+
+        .win-scrollviewer-contentelement {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            height: auto;
+            width: auto;
+            overflow-x: hidden;
+            -ms-overflow-style: none;
+            -ms-touch-action: none;
+            -ms-scrollbar-face-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+        }
+
+        /* When the ScrollViewer is in a hub, we want to set the pan direction to horizontal
+           so that the user can pan horizontally on details pages if vertical scrolling is
+           not required. */
+        .win-hub-horizontal .win-scrollviewer-contentelement {
+            -ms-touch-action: pan-x;
+        }
+
+        .win-hub-vertical .win-scrollviewer-contentelement {
+            -ms-touch-action: pan-y;
+        }
+
+        .win-scrollable .win-scrollviewer-contentelement {
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            -ms-touch-action: pan-y;
+            overflow: scroll;
+        }
+
+    body:not(.win-visiblebutnotfocused) .win-active .win-scrollviewer-contentelement {
+        background-color: rgba(16, 16, 16, 0.1); /*XboxClr-VideoSafeWhite*/
+    }
+
+    .win-scrollviewer .win-scrollable-down .win-overlay-scrolldownindicator {
+        color: rgb(16, 16, 16); /*XboxClr-VideoSafeWhite*/
+    }
+
+    .win-scrollviewer .win-scrollable-up .win-overlay-scrollupindicator {
+        color: rgb(16, 16, 16); /*XboxClr-VideoSafeWhite*/
+    }
+
+    .win-scrollviewer .win-scrollable-up.win-scrollable-down .win-overlay-scrollupindicator, 
+    .win-scrollviewer .win-scrollable-up.win-scrollable-down .win-overlay-scrolldownindicator {
+        color: rgb(16, 16, 16); /*XboxClr-VideoSafeWhite*/
+    }
+      
+    /* Voice Styles */
+    .win-voice-voicemodeactive .win-scrollviewer.win-scrollable .win-scrollindicator .win-overlay-voiceindicators {
+        background-color: rgb(16, 16, 16);
+    }
+
+    /* Ensures the VUI for ScrollViewers will be above the focus of the item containers. */
+    .win-scrollindicator {
+        position: relative;
+        z-index: 1;
+    }
+
+/*
+Styles for Listbox Background
+*/
+.listbox > input[type=text], input[type=password],
+input[type=email], input[type=number],
+input[type=tel], input[type=url],
+input[type=search], textarea, .win-textarea,
+select, input::-ms-check {
+	background-clip: border-box;
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    background-color: rgb(235, 235, 235); /*XboxClr-ListButtonBg*/
+    /* TEMP added a border */
+    border: 2px solid rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+    padding: 0; 
+}
+
+.listbox > input[type=text]:hover, input[type=password]:hover, 
+input[type=email]:hover, input[type=number]:hover, 
+input[type=tel]:hover, input[type=url]:hover,
+input[type=search]:hover, textarea:hover, 
+.win-textarea:hover, select:hover, input:hover::-ms-check {
+    background-clip: border-box;
+     /*TODO Need to verify color values for ui-light style*/
+    background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    color: rgb(235, 235, 235); /*XboxClr-ListButtonText*/
+}
+
+.listbox > input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+input[type=tel]:focus, 
+input[type=url]:focus,
+input[type=search]:focus, 
+textarea:focus, 
+.win-textarea:focus, 
+select:focus, 
+input:focus::-ms-check {
+    background-clip: border-box;
+    background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.listbox > textarea:focus, 
+textarea:active,
+.win-textarea:focus, 
+.win-textarea:active,
+select:focus, 
+select:active {
+	background-clip: border-box;
+     /*removed the color to apply for ui-light style*/
+}
+
+/* Hide the 'eye' and 'X' icon on the password box because they are not actionable on Xbox */
+input::-ms-reveal {
+    display: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+/* Disabled Textbox with input */
+.noinput[type=text], .noinput[type=password],
+.noinput[type=email], .noinput[type=number],
+.noinput[type=tel], .noinput[type=url],
+.noinput[type=search] {
+	background-clip: border-box;
+	background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    border: none;
+	padding: 0;
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+.noinput[type=text]:hover, .noinput[type=password]:hover, 
+.noinput[type=email]:hover, .noinput[type=number]:hover, 
+.noinput[type=tel]:hover, .noinput[type=url]:hover,
+.noinput[type=search]:hover, .noinput:hover::-ms-check {
+	background-clip: border-box;
+	background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+	border-color: transparent;
+	color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+    /* TEMP */
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+.noinput:hover:active::-ms-check { /* only checkbox and radio have press state */
+	background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+	color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+.noinput:-ms-keyboard-active::-ms-check { /* only checkbox and radio have press state */
+	background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+}
+.noinput[type=text]:focus, 
+.noinput[type=text]:active,
+.noinput[type=password]:focus, 
+.noinput[type=password]:active,
+.noinput[type=email]:focus, 
+.noinput[type=email]:active,
+.noinput[type=number]:focus, 
+.noinput[type=number]:active,
+.noinput[type=tel]:focus, 
+.noinput[type=tel]:active,
+.noinput[type=url]:focus, 
+.noinput[type=url]:active,
+.noinput[type=search]:focus, 
+.noinput[type=search]:active,
+.noinput > select:focus, 
+.noinput > select:active {
+	background-clip: border-box;
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	border-color: transparent;
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+.noinput::selection {
+	background-color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+	color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	border-width: 0px;
+	border-style: none;
+}
+
+.noinput::-ms-clear, .noinput::-ms-reveal {
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+	border: none;
+    
+}
+.noinput::-ms-clear:hover, .noinput::-ms-reveal:hover {
+	background-color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+	border: none;
+}
+.noinput::-ms-clear:hover:active, .noinput::-ms-reveal:hover:active {
+	background-color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+	color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+	border: none;
+}
+
+.noinput::selection {
+	background-color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+	color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+	border-width: 0px;
+	border-style: none;
+}
+
+.noinput[type=text], .noinput[type=password], .noinput[type=email], .noinput[type=number],
+.noinput[type=tel], .noinput[type=url], .noinput[type=search] {
+	-ms-user-select: element;
+	min-height: 55px;
+	min-width: 250px;
+	margin-top: 4px;
+	margin-right: 0;
+	margin-bottom: 4px;
+	margin-left: 0;
+	border: none;
+	font-size: 18pt;
+	font-weight: 300;
+	line-height: normal;
+    background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+/* Gesture Support */
+
+/* For general gesture support we mark the following items as gesture
+   aware so that we can provide a good default experience */
+button, input, select, a, .win-focusable {
+    -ms-attraction: 0 0 0 0;
+}
+
+/* Item Container */
+.win-itemcontainer {
+    position: relative;
+    overflow: visible;
+    outline: none;
+    display: table;
+    box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0); /*XboxClr-VideoSafeBlack*/ 
+    z-index: 0;
+}
+    body:not(.win-visiblebutnotfocused) .win-itemcontainer:focus {
+        box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0.8); /*XboxClr-VideoSafeBlack*/ 
+        z-index: 1;
+    }
+
+.win-tile-focusindicator {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    outline: solid 4px rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    border: solid 4px rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/ 
+    margin: -4px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform-origin: 50% 50%;
+    z-index: 10;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: opacity;
+}
+
+.win-itemcontainer-active:hover:not(.win-disabled) .win-tile-focusindicator,
+body:not(.win-visiblebutnotfocused) .win-focusable:focus > .win-tile-focusindicator {
+    opacity: 1;  
+}
+
+.win-itemcontainer:not(.win-itemcontainer-active) .win-tile-focusindicator {
+    animation-name: itemcontainer-active-scaleback;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transform-origin: 50% 50%;
+}
+
+.win-itemcontainer-active:not(.win-disabled) .win-tile-focusindicator {
+    animation-name: itemcontainer-active-scale;
+    animation-duration: 115ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transform-origin: 50% 50%;
+}
+
+@keyframes itemcontainer-active-scaleback {
+     0% { box-shadow: inset 0 0 0 6px rgb(16, 16, 16); } /*XboxClr-VideoSafeBlack*/
+    100% { box-shadow: inset 0 0 0 0px rgb(16, 16, 16);} /*XboxClr-VideoSafeBlack*/
+}
+
+@keyframes itemcontainer-active-scale {
+     0% {  box-shadow: inset 0 0 0 0px rgb(16, 16, 16); } /*XboxClr-VideoSafeBlack*/
+    100% { box-shadow: inset 0 0 0 6px rgb(16, 16, 16);} /*XboxClr-VideoSafeBlack*/
+}
+.win-itemcontainer-captureproxy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Two z-index values below the AppBar click eating div
+       so that "click to dismiss" still works for flyouts */
+    z-index: 998;
+}
+
+/*item box is also used to display hover outline*/
+.win-itemcontainer .win-itembox {
+    outline: solid 4px rgba(107, 107, 107, 0); /*XboxClr-Ui3*/
+    border: solid 4px rgba(16, 16, 16, 0); /*XboxClr-VideoSafeWhite*/
+    margin: -4px;
+}
+
+.win-focusable:hover:not(.win-disabled):not(:focus) > .win-itembox {
+      outline: solid 4px rgba(107, 107, 107, 1); /*XboxClr-Ui3*/
+      border: solid 4px rgba(16, 16, 16, 1); /*XboxClr-VideoSafeWhite*/
+}
+
+/* ItemContainer inside ListView overrides */
+.win-container {
+    position: relative;
+    overflow: visible;
+    outline: none;
+}
+
+.win-focused > .win-tile-focusindicator {
+    opacity: 1;  
+}
+
+:not(win-focused) > .win-tile-focusindicator {
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-property: opacity;
+    opacity: 0;  
+}
+
+.win-listview .win-focusedoutline {
+    display: none;
+}
+
+.win-listview .win-container:hover {
+    outline-color: rgba(107, 107, 107, 1);
+    outline-style: solid;
+    outline-width: 4px;
+}
+
+.win-listview {
+    overflow: visible;
+}
+
+.win-listview .win-focused {
+     z-index: 10;
+}
+
+.win-listview .win-voice-host {
+     z-index: 11;
+}
+
+    .win-listview > .win-horizontal > .win-surface {
+        margin-top: 18px;
+        margin-bottom: -18px;
+        /* We put 100px of padding to the right so when the user scrolls to
+           the end of the List the "scroll into view" code can bring the last item into
+           the action safe area */
+        padding-right: 100px;
+    }
+
+    .win-listview > .win-horizontal {
+        margin-top: -18px;
+        height: calc(100% + 18px);
+    }
+
+.win-listview > .win-horizontal .win-container {
+   margin: 4px;
+}
+
+.win-listview > .win-vertical .win-container {
+   margin-bottom: 4px;
+   margin-left: 0;
+   margin-right: 0;
+   margin-top: 4px;
+}
+
+.win-listview > .win-vertical.win-viewport {
+    padding: 0px 18px;
+    margin-left: -18px;
+}
+
+    /* Overflow cannot be set to hidden otherwise animated scrolling will not work. */
+    .win-listview > .win-vertical.win-viewport {
+        overflow-x: auto;
+        -ms-touch-action: pan-y;
+    }
+    .win-listview > .win-horizontal.win-viewport {
+        overflow-y: auto;
+        -ms-touch-action: pan-x;
+    }
+
+    /*except in gesture mode, to prevent jiggling on wrong axis*/
+    .win-gestureactive .win-listview > .win-vertical.win-viewport {
+        overflow-x: hidden;
+    }
+    .win-gestureactive .win-listview > .win-horizontal.win-viewport {
+        overflow-y: hidden;
+    }
+
+/* 
+RatingPicker 
+*/
+
+ /*Overwrite the win-flyout for rating picker.*/
+.win-flyout.win-ratingpicker-overlay {
+    background-color: transparent; /*This enable the focused shadow*/
+    margin-left: -20px; /*Position the flyout.*/
+    max-height: 100vh;
+    height: auto;
+    padding: 40px; /*padding to enable the focused shadow.*/
+}
+
+.win-ratingpicker {
+    width: 424px;
+    height: 100px;
+}
+
+.win-ratingpicker-flyoutcenteringdiv {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-grid-row: 2;
+    width: 424px;
+    height: auto;
+    margin: 0 -4px;/*Let the border appear outside of the flyout.*/
+}
+
+.win-ratingpicker-container {
+    background-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+    height: auto;
+    z-index: 1008;
+    position: relative;
+    /*This container has the background color of the flyout*/
+}
+
+.win-gestureactive button.win-ratingpicker-ratingoption:hover:not(:focus):not(:active) {
+    border: solid 4px rgba(16, 16, 16, 1); /*XboxClr-VideoSafeBlack*/
+    outline: solid 4px rgba(107, 107, 107, 1); /*XboxClr-Ui3*/
+}
+
+button.win-ratingpicker-ratingoption {
+    border: solid 4px rgba(16, 16, 16, 0); /*XboxClr-VideoSafeBlack*/
+    background-color: transparent;
+    width: 432px;
+    height: 108px; /*height 108px is the value that includes the focused border.*/
+    outline: solid 4px rgba(235, 235, 235, 0); /*XboxClr-VideoSafeWhite*/
+    padding: 38px 47px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+    body:not(.win-visiblebutnotfocused) button.win-ratingpicker-ratingoption:focus {
+        background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VideoSafeWhite*/
+        outline: solid 4px rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+        border: solid 4px rgba(16, 16, 16, 1); /*XboxClr-VideoSafeBlack*/ 
+        box-shadow: 0px 0px 25px 1px rgba(16, 16, 16, 0.8); /*XboxClr-VideoSafeBlack*/ 
+        color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    }
+
+    .win-gestureactive  button.win-ratingpicker-ratingoption:active,
+    button.win-ratingpicker-ratingoption:active {
+        background-color: rgba(235, 235, 235, 0.1); /*XboxClr-VideoSafeWhite*/
+        outline: solid 4px rgba(235, 235, 235, 1); /*XboxClr-VideoSafeWhite*/
+        border: solid 4px rgba(16, 16, 16, 1); /*XboxClr-VideoSafeBlack*/ 
+        transition-duration: 0.115s;
+        box-shadow: inset 0 0 0 6px rgb(16, 16, 16); 
+        transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+        transition-property: box-shadow;
+    }
+
+        body:not(.win-visiblebutnotfocused) button.win-ratingpicker-ratingoption:focus .win-star.win-full {
+            color: rgb(16, 124, 16); /*XboxClr-BrandGreen*/
+        }
+
+        button.win-ratingpicker-ratingoption:focus .win-ratingpicker-voice {
+            color: rgb(16, 124, 16); /*XboxClr-BrandGreen*/
+        }
+
+        /* When voice is engaged we need to use the lighter green to achieve high contrast, because the
+           background is very dark. */
+        .win-voice-voicemodeactive button.win-ratingpicker-ratingoption:focus .win-ratingpicker-voice,
+        .win-voice-voicemodeactive button.win-ratingpicker-ratingoption.win-voice-activelistening:focus {
+            color: rgb(41, 156, 16); /*XboxClr-BrandGreenLighter*/
+        }
+
+.win-ratingpicker-ratingoption {
+    width: 100%;
+    display: -ms-inline-flexbox;
+}
+
+.win-ratingpicker-overlay {
+    height: auto;
+    width: 408px;
+}
+
+.win-ratingpicker-ratingoption > .win-star {
+    margin: 18px;
+}
+
+    .win-ratingpicker-ratingoption > .win-star::before {
+        font-family: 'Segoe UI Symbol';
+        font-size: 18pt;
+        content: "\E082";
+    }
+
+    .win-ratingpicker-ratingoption > .win-star.win-empty {
+        color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+    }
+
+     .win-ratingpicker-ratingoption:focus > .win-star.win-empty {
+        color: rgba(34, 34, 34, .3); /*XboxClr-Ui1*/
+    }
+
+    .win-ratingpicker-ratingoption > .win-star.win-full {
+        color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    }
+
+.win-ratingpicker-clearrating {
+    display: none;
+}
+
+.win-ratingpicker-enableclear .win-ratingpicker-clearrating {
+    padding-left: 64px;
+    text-align: left;
+    display: inline;
+}
+
+:not(.win-voice-voicemodeactive) .win-overlay-voice-command {
+  display: none;
+}
+
+.win-voice-voicemodeactive .win-overlay-voice-command {
+  display: inline;
+}
+
+.win-voice-disambiguationlistening  .win-ratingpicker-nonvoice,
+.win-voice-activelistening .win-ratingpicker-nonvoice {
+    display: none;
+}
+
+:not(.win-voice-disambiguationlistening) .win-ratingpicker-voice,
+:not(.win-voice-activelistening) .win-ratingpicker-voice {
+    display: none;
+}
+
+.win-voice-disambiguationlistening .win-ratingpicker-voice,
+.win-voice-activelistening .win-ratingpicker-voice {
+    display: inline;
+    margin: 16px;
+}
+
+/*STYLES FOR VUI CONTROL*/
+
+.win-voice-host {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.win-voice-container {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-rows: 18px 1fr auto 1fr 18px;
+    -ms-grid-columns: 18px 1fr auto 1fr 18px;
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    opacity: 0;
+    transition-delay: 0ms;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.win-voice-disambiguationlistening:not(.win-disabled) .win-voice-container,
+.win-voice-activelistening:not(.win-disabled) .win-voice-container {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 50ms;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+}
+
+.win-voice-overlay {
+    -ms-grid-column-span: 100;  /*make sure we cover the tile by default*/
+    -ms-grid-row-span:100; /*make sure we cover the tile by default*/    
+    background-color: rgba(16, 16, 16, 0.7); /*XboxClr-VideoSafeBlack*/
+    transform: translateY(150px);
+   transition-delay: 0.3s;
+    transition-property: transform;
+    transition-duration: 0;
+    transition-timing-function: cubic-bezier(0.71,0.01,0.84,0);
+}
+
+.win-voice-disambiguationlistening:not(.win-disabled) .win-voice-overlay,
+.win-voice-activelistening:not(.win-disabled) .win-voice-overlay  {
+    transform: translateY(0);
+    transition-duration: 0;
+    transition-delay: 0;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+}
+
+.win-voice-initial-activelistening.win-voice-disambiguationlistening:not(.win-disabled) .win-voice-overlay,
+.win-voice-initial-activelistening.win-voice-activelistening:not(.win-disabled) .win-voice-overlay  {
+    transition-duration: 1s;
+    transition-delay: 50ms;
+}
+
+.win-voice-textdisplay {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    overflow: hidden;
+    text-overflow: clip;
+    max-height: 108px;  
+    transform: translateY(150px);
+    transition-delay: 0ms;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function:  cubic-bezier(0.71,0.01,0.84,0);
+}
+
+.win-voice-disambiguationlistening:not(.win-disabled) .win-voice-textdisplay,
+.win-voice-activelistening:not(.win-disabled) .win-voice-textdisplay {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0;
+    transition-duration: 0;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+}
+
+.win-voice-initial-activelistening.win-voice-disambiguationlistening:not(.win-disabled) .win-voice-textdisplay,
+.win-voice-initial-activelistening.win-voice-activelistening:not(.win-disabled) .win-voice-textdisplay {
+    transition-delay: 50ms;
+    transition-duration: 1s;
+}
+
+.win-voice-disambiguationlistening .win-voice-activetext {
+    color: rgb(252, 209, 22);
+}
+
+.win-voice-activetext {
+    color: rgb(93, 194, 30); /*XboxClr-LightGreen*/
+}
+
+.win-itemcontainer.win-voice-disambiguationlistening:not(.win-disabled) .win-voice-inactivetext,
+.win-itemcontainer.win-voice-activelistening:not(.win-disabled) .win-voice-inactivetext {
+    opacity: 0;
+    transition-delay: 0s;
+    transition-duration: 0.01s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: opacity;
+}
+
+.win-voice-inactivetext {
+    opacity: 1;
+    transition-delay: 0.3s;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-property: opacity;
+}
+
+.win-mediatile-metadatabackground {
+    transition-delay: 0.3s;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-property: opacity;
+}
+
+.win-voice-disambiguationlistening:not(.win-disabled) .win-mediatile-metadatabackground,
+.win-voice-activelistening:not(.win-disabled) .win-mediatile-metadatabackground {
+    opacity: 0;
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: opacity;
+}
+
+.win-voice-disambiguationlistening:not(.win-disabled).win-tile-more .win-item,
+.win-voice-activelistening:not(.win-disabled).win-tile-more .win-item {
+    width: 424px;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: width;
+}
+
+.win-voice-disambiguationlistening:not(.win-disabled).win-tile-more .win-text-tiletitle,
+.win-voice-disambiguationlistening:not(.win-disabled):focus.win-tile-more .win-text-tiletitle,
+.win-voice-activelistening:not(.win-disabled).win-tile-more .win-text-tiletitle,
+.win-voice-activelistening:not(.win-disabled):focus.win-tile-more .win-text-tiletitle {
+    opacity: 1;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: opacity;
+}
+
+.win-voice-disambiguationlistening.win-tile-more .win-icon-more,
+.win-voice-activelistening.win-tile-more .win-icon-more {
+    opacity:0;
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: opacity;
+}
+
+.win-ui-light button.win-voice-activelistening,
+.win-overlay-voice-command.win-voice-activelistening,
+.win-hub-section-header-content.win-voice-activelistening,
+.win-voice-activelistening .win-tabview-tab-header-content,
+.win-appbar button.win-command.win-voice-activelistening,
+.win-appbar button.win-command.win-voice-activelistening .win-label {
+    color: rgb(93, 194, 30); /*XboxClr-LightGreen*/
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: color;
+}
+
+.win-ui-light button.win-voice-activelistening.win-voice-disabledlabel,
+.win-overlay-voice-command.win-voice-activelistening.win-voice-disabledlabel {
+    color: rgb(107, 107, 107); /*XboxClr-Ui3*/
+}
+
+.win-ui-light button.win-voice-disambiguationlistening,
+.win-hub-section-header-content.win-voice-disambiguationlistening,
+.win-voice-disambiguationlistening .win-tabview-tab-header-content,
+.win-appbar button.win-command.win-voice-disambiguationlistening,
+.win-appbar button.win-command.win-voice-disambiguationlistening .win-label {
+    color: rgb(252, 209, 22);
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.16,1,0.29,0.99);
+    transition-property: color;
+}
+
+/* SearchBox Control */
+.win-searchbox {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto 1fr;
+    -ms-grid-rows: auto auto;
+    width: 100vw;
+}
+
+.win-searchbox-letterscontainer {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    display: -ms-grid;
+    -ms-grid-columns: auto 1fr auto;
+    min-width: 80vw;
+}
+
+input[type=text].win-searchbox-input {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    height: 64px;
+    width: 40vw;
+    background-color: rgb(194, 194, 194); /*XboxClr-Ui4*/
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(16, 16, 16); /*XboxClr-VideoSafeBlack*/
+}
+
+.win-searchbox-toggleletters {
+    -ms-grid-column: 1;
+    display: inline-block;
+    margin-right: 16px;
+    width: 70px;
+}
+
+/* The .win-searchbox-secondaryalphabet class is used for languages such as Russian that
+   have more than one alphabet. Specifically, Russian has the Cyrillic characters and Latin
+   characters. */
+.win-searchbox-alphabetical,
+.win-searchbox-secondaryalphabet,
+.win-searchbox-numericandsymbols
+ {
+    -ms-grid-column: 2;
+    display: -ms-inline-flexbox;
+    -ms-flex-pack: distribute;
+}
+
+.win-searchbox-secondaryletters {
+    -ms-grid-column: 3;
+    display: -ms-inline-flexbox;
+    margin-left: 16px;
+}
+
+.win-searchbox-character {
+    min-width: 30px;
+    text-align: center;
+}
+    .win-searchbox-character:focus {
+        outline: none;
+        transform: scale(2.5);
+        transform-origin: 50% 55%;
+        transition: transform 100ms ease-in;
+    }
+    .win-searchbox-character:focus.win-spaceicon {
+        transform-origin: 50% 72%;
+    }
+
+        .win-searchbox-character.win-pressed {
+        transform: scale(0.75, 0.75);
+        transition: transform 100ms ease-in;
+    }
+
+    .win-searchbox-character.win-pressed:focus {
+        /* 1.9 = 75% of the normal focused size which is a scale transform of 2.5 */
+        transform: scale(1.9, 1.9);
+    }
+
+.win-backspaceicon {
+    min-width: 60px;
+}
+
+.win-spaceicon {
+    min-width: 60px;
+}
+
+.win-backspaceicon::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\232B';
+}
+
+.win-spaceicon::before {
+    font-family: 'Segoe UI Symbol';
+    content: '\2334';
+}
+
+.win-searchbox-character.win-search-toggleletters {
+    min-width: 80px;
+}
+
+.win-searchbox-toggleletters-alphabeticon::before {
+    font-family: 'Segoe UI Symbol';
+    font-size: 18pt;
+    content: 'a-z';
+}
+
+.win-searchbox-toggleletters-numbersandsymbolsicon::before {
+    font-family: 'Segoe UI Symbol';
+    content: '&12';
+}
+
+.win-searchbox-lettershidden {
+    display: none;
+}
+
+/* Parental Controls */
+.win-mediatile-familysafety-locked .win-item {
+    background-color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+}
+
+    .win-mediatile-familysafety-locked .win-item::before {
+    position: absolute;
+    top: calc(50% - 65px);
+    left: calc(50% - 38px);
+    font-size: 59pt;
+    font-family: 'Segoe UI Symbol';
+    content: '\1F512';
+    color: rgb(194,194,194); /*XboxClr-Ui5*/
+}
+
+.win-mediatile-familysafety-locked .win-mediatile-metadatagrid,
+.win-mediatile-familysafety-locked .win-voice-host {
+    /* Important is bad in general, but we use it here, because the user should *never*
+       be able to see the metadata section of the MediaTile */
+    display: none !important;
+}
+
+@media screen and (-ms-view-state: filled) {
+    .win-searchbox {
+        -ms-grid-columns: 1fr 90vw 1fr;
+    }
+
+    .win-searchbox-letterscontainer {
+        -ms-grid-columns: 1fr 80vw 1fr;
+    }
+}
+
+/* ItemContainer inside ListView overrides */
+.win-container {
+    position: relative;
+    overflow: visible;
+    outline: none;
+}
+
+
+.win-focused > .win-tile-focusindicator {
+    opacity: 1;  
+}
+
+:not(win-focused) > .win-tile-focusindicator {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity;
+    opacity: 0;  
+}
+
+.win-pressed:not(.win-disabled) .win-tile-focusindicator {
+    animation-name: itemcontainer-active-scale;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0.74, 0, 1);
+    transform-origin: 50% 50%;
+    z-index: 10;
+}
+
+.win-keypressed:not(.win-disabled) .win-tile-focusindicator {
+    animation-name: itemcontainer-active-scale;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0.74, 0, 1);
+    transform-origin: 50% 50%;
+    z-index: 10;
+}
+
+/* We turn off GPU animations while in constrained mode, because when running next to a game.
+    the app has fewer GPU resources. In that case, we have limited GPU resources to keep the 
+    UI responsive, we turn off animations in snap. */
+.win-constrained .win-mediaplayer-transportcontrols button,
+.win-constrained .win-mediaplayer-transportcontrols button .win-mediaplayer-icon,
+body:not(.win-visiblebutnotfocused) .win-constrained .win-mediaplayer-transportcontrols button:focus .win-mediaplayer-icon,
+.win-constrained .win-mediaplayer-transportcontrols button.win-mediaplayer-transportbarbutton-active .win-mediaplayer-icon,
+.win-constrained .win-tile-focusindicator,
+.win-constrained :not(win-focused) > .win-tile-focusindicator,
+.win-constrained .win-voice-container,
+.win-constrained .win-voice-overlay,
+.win-constrained .win-voice-inactivetext {
+    transition: none;
+}
+
+.win-constrained .win-itemcontainer:not(.win-itemcontainer-active) .win-tile-focusindicator {
+    animation: none;
+    box-shadow: inset 0 0 0 0 rgb(16, 16, 16);
+}
+
+.win-constrained .win-itemcontainer-active:not(.win-disabled) .win-tile-focusindicator {
+    animation: none;
+    box-shadow: inset 0 0 0 6px rgb(16, 16, 16);
+}
+
+/*These styles must be at the bottom so they override any
+other xbox-ui-dark/light.css styles*/
+.win-hidden {
+    display: none;
+}
+
+.win-visible {
+    display: normal;
+}
+
+body,
+.win-type-xx-large,
+.win-type-x-large,
+.win-type-large,
+.win-type-medium,
+.win-type-small,
+.win-type-x-small,
+.win-type-xx-small,
+input,
+textarea,
+.win-textarea,
+button,
+select,
+option {
+    font-family: 
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:-ms-lang(am, ti),
+.win-type-xx-large:-ms-lang(am, ti),
+.win-type-x-large:-ms-lang(am, ti),
+.win-type-large:-ms-lang(am, ti),
+.win-type-medium:-ms-lang(am, ti),
+.win-type-small:-ms-lang(am, ti),
+.win-type-x-small:-ms-lang(am, ti),
+.win-type-xx-small:-ms-lang(am, ti),
+input:-ms-lang(am, ti),
+textarea:-ms-lang(am, ti),
+.win-textarea:-ms-lang(am, ti),
+button:-ms-lang(am, ti),
+select:-ms-lang(am, ti),
+option:-ms-lang(am, ti) {
+    font-family: 
+        "Ebrima",
+        "Segoe UI",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-xx-large:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-x-large:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-large:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-medium:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-small:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-x-small:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-type-xx-small:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+input:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+textarea:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+.win-textarea:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+button:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+select:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te),
+option:-ms-lang(as, bn, gu, hi, kn, kok, ml, mr, ne, or, pa, si, ta, te) {
+    font-family: 
+        "Nirmala UI",
+        "Segoe UI",
+        "Ebrima",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:lang(chr-CHER-US),
+.win-type-xx-large:lang(chr-CHER-US),
+.win-type-x-large:lang(chr-CHER-US),
+.win-type-large:lang(chr-CHER-US),
+.win-type-medium:lang(chr-CHER-US),
+.win-type-small:lang(chr-CHER-US),
+.win-type-x-small:lang(chr-CHER-US),
+.win-type-xx-small:lang(chr-CHER-US),
+input:lang(chr-CHER-US),
+textarea:lang(chr-CHER-US),
+.win-textarea:lang(chr-CHER-US),
+button:lang(chr-CHER-US),
+select:lang(chr-CHER-US),
+option:lang(chr-CHER-US) {
+    font-family: 
+        "Gadugi",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:lang(ja),
+.win-type-xx-large:lang(ja),
+.win-type-x-large:lang(ja),
+.win-type-large:lang(ja),
+.win-type-medium:lang(ja),
+.win-type-small:lang(ja),
+.win-type-x-small:lang(ja),
+.win-type-xx-small:lang(ja),
+input:lang(ja),
+textarea:lang(ja),
+.win-textarea:lang(ja),
+button:lang(ja),
+select:lang(ja),
+option:lang(ja) {
+    font-family: 
+        "Meiryo UI",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:lang(km),
+.win-type-xx-large:lang(km),
+.win-type-x-large:lang(km),
+.win-type-large:lang(km),
+.win-type-medium:lang(km),
+.win-type-small:lang(km),
+.win-type-x-small:lang(km),
+.win-type-xx-small:lang(km),
+input:lang(km),
+textarea:lang(km),
+.win-textarea:lang(km),
+button:lang(km),
+select:lang(km),
+option:lang(km) {
+    font-family: 
+        "Khmer UI",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:lang(ko),
+.win-type-xx-large:lang(ko),
+.win-type-x-large:lang(ko),
+.win-type-large:lang(ko),
+.win-type-medium:lang(ko),
+.win-type-small:lang(ko),
+.win-type-x-small:lang(ko),
+.win-type-xx-small:lang(ko),
+input:lang(ko),
+textarea:lang(ko),
+.win-textarea:lang(ko),
+button:lang(ko),
+select:lang(ko),
+option:lang(ko) {
+    font-family: 
+        "Malgun Gothic",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:lang(lo),
+.win-type-xx-large:lang(lo),
+.win-type-x-large:lang(lo),
+.win-type-large:lang(lo),
+.win-type-medium:lang(lo),
+.win-type-small:lang(lo),
+.win-type-x-small:lang(lo),
+.win-type-xx-small:lang(lo),
+input:lang(lo),
+textarea:lang(lo),
+.win-textarea:lang(lo),
+button:lang(lo),
+select:lang(lo),
+option:lang(lo) {
+    font-family: 
+        "Lao UI",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:lang(th),
+.win-type-xx-large:lang(th),
+.win-type-x-large:lang(th),
+.win-type-large:lang(th),
+.win-type-medium:lang(th),
+.win-type-small:lang(th),
+.win-type-x-small:lang(th),
+.win-type-xx-small:lang(th),
+input:lang(th),
+textarea:lang(th),
+.win-textarea:lang(th),
+button:lang(th),
+select:lang(th),
+option:lang(th) {
+    font-family: 
+        "Leelawadee",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Microsoft YaHei UI",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-xx-large:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-x-large:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-large:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-medium:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-small:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-x-small:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-type-xx-small:-ms-lang(zh-CN, zh-Hans, zh-SG),
+input:-ms-lang(zh-CN, zh-Hans, zh-SG),
+textarea:-ms-lang(zh-CN, zh-Hans, zh-SG),
+.win-textarea:-ms-lang(zh-CN, zh-Hans, zh-SG),
+button:-ms-lang(zh-CN, zh-Hans, zh-SG),
+select:-ms-lang(zh-CN, zh-Hans, zh-SG),
+option:-ms-lang(zh-CN, zh-Hans, zh-SG) {
+    font-family: 
+        "Microsoft YaHei UI",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft JhengHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}
+
+body:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-xx-large:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-x-large:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-large:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-medium:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-small:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-x-small:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-type-xx-small:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+input:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+textarea:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+.win-textarea:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+button:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+select:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO),
+option:-ms-lang(zh-HK, zh-TW, zh-Hant, zh-MO) {
+    font-family: 
+        "Microsoft JhengHei UI",
+        "Segoe UI",
+        "Ebrima",
+        "Nirmala UI",
+        "Gadugi",
+        "Segoe Xbox Symbol",
+        "Segoe UI Symbol",
+        "Meiryo UI",
+        "Khmer UI",
+        "Tunga",
+        "Lao UI",
+        "Raavi",
+        "Iskoola Pota",
+        "Latha",
+        "Leelawadee",
+        "Microsoft YaHei UI",
+        "Malgun Gothic",
+        "Estrangelo Edessa",
+        "Microsoft Himalaya",
+        "Microsoft New Tai Lue",
+        "Microsoft PhagsPa",
+        "Microsoft Tai Le",
+        "Microsoft Yi Baiti",
+        "Mongolian Baiti",
+        "MV Boli",
+        "Myanmar Text",
+        "Cambria Math";
+}

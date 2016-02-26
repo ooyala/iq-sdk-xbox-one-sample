@@ -1,0 +1,37 @@
+﻿/*
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Copyright (c) Microsoft Corporation. All rights reserved
+*/
+
+.content {
+    margin-left: 240px;
+    margin-right: 240px;
+    height:500px;
+}
+
+.scenario-button {
+    width:300px;
+    height:300px;
+    background-color: rgb(41, 156, 16);
+    padding:5px;
+    margin:10px;
+    float:left;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .scenarios section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .scenarios section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}

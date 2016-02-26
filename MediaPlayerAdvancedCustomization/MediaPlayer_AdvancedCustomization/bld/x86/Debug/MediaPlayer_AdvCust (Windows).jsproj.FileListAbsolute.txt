@@ -1,0 +1,18 @@
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\x86\Debug\resources.pri
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\x86\Debug\AppxManifest.xml
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\x86\Debug\MediaPlayer_AdvCust (Windows).build.appxrecipe
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\priconfig.xml
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\layout.resfiles
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\resources.resfiles
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\pri.resfiles
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\LanguageQualifiers.txt
+C:\XboxDev\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\ProjectArchitectures.txt
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\x86\Debug\resources.pri
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\x86\Debug\AppxManifest.xml
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\x86\Debug\MediaPlayer_AdvCust (Windows).build.appxrecipe
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\priconfig.xml
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\layout.resfiles
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\resources.resfiles
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\pri.resfiles
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\LanguageQualifiers.txt
+Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bld\x86\Debug\ProjectArchitectures.txt

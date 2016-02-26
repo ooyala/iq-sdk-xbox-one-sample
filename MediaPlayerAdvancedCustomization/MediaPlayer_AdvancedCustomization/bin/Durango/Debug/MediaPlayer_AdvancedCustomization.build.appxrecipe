@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>IE11WIN10</Machine>
+    <WindowsUser>IEUser</WindowsUser>
+    <SolutionConfiguration>Debug|Durango</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\Durango\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\scenario1.css">
+      <PackagePath>css\scenario1.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\scenario2.css">
+      <PackagePath>css\scenario2.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\scenario3.css">
+      <PackagePath>css\scenario3.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\scenario4.css">
+      <PackagePath>css\scenario4.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\scenarios.css">
+      <PackagePath>scenarios.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\default.html">
+      <PackagePath>default.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\scenario1.html">
+      <PackagePath>html\scenario1.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\scenario2.html">
+      <PackagePath>html\scenario2.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\scenario3.html">
+      <PackagePath>html\scenario3.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\scenario4.html">
+      <PackagePath>html\scenario4.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\scenarios.html">
+      <PackagePath>scenarios.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\iq.js">
+      <PackagePath>js\iq.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\scenario1.js">
+      <PackagePath>js\scenario1.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\scenario2.js">
+      <PackagePath>js\scenario2.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\scenario3.js">
+      <PackagePath>js\scenario3.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\scenario4.js">
+      <PackagePath>js\scenario4.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\scenarios.js">
+      <PackagePath>js\scenarios.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\Durango\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

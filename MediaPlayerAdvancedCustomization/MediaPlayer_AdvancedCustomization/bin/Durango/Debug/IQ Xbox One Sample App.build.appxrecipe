@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>IE11WIN10</Machine>
+    <WindowsUser>IEUser</WindowsUser>
+    <SolutionConfiguration>Debug|Durango</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\Durango\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\css\backlotView.css">
+      <PackagePath>css\backlotView.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\scenarios.css">
+      <PackagePath>scenarios.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\default.html">
+      <PackagePath>default.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\backlotView.html">
+      <PackagePath>html\backlotView.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\page.html">
+      <PackagePath>html\page.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\html\player.html">
+      <PackagePath>html\player.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\scenarios.html">
+      <PackagePath>scenarios.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\analytics.js">
+      <PackagePath>js\analytics.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\backlotRequester.js">
+      <PackagePath>js\backlotRequester.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\backlotView.js">
+      <PackagePath>js\backlotView.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\iq.js">
+      <PackagePath>js\iq.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\player.js">
+      <PackagePath>js\player.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\reporter.js">
+      <PackagePath>js\reporter.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\js\xboxAdapter.js">
+      <PackagePath>js\xboxAdapter.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="Y:\Documents\workspace\iq-xbox\MediaPlayerAdvancedCustomization\MediaPlayer_AdvancedCustomization\bin\Durango\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

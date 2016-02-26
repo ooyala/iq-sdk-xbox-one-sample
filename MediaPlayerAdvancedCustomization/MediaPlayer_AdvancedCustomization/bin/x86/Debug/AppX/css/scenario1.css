@@ -1,0 +1,35 @@
+﻿/*
+THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Copyright (c) Microsoft Corporation. All rights reserved
+*/
+
+body {
+}
+
+.CustomButtonNormal {
+    color:red;
+    border:1px solid blue;
+    /*transform: scale(1);
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    color: rgba(235, 235, 235, 1);*/
+}
+.CustomButtonEnhance {
+    color:blue;
+    border:1px solid red;
+    /*transform: scale(2);
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    color: rgba(235, 235, 235, 1);*/
+}
+.mediaplayer-png-icon {
+    background: url('/images/smalllogo.png') no-repeat center content-box; 
+    width:50px;
+    height:32px;
+}

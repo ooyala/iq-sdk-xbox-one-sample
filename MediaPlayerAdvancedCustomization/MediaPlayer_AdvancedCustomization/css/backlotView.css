@@ -1,0 +1,70 @@
+﻿/* Template for the items in the ListViews in this sample */       
+
+.layout-landingpageheader .win-layout-pagetitle {
+        display: none;
+    }
+
+
+.smallListIconTextItem
+{
+    width: 400px;
+    height: 250px;
+    padding: 5px;
+    overflow: hidden;
+    clip : rect(0px,500px,300px,0px);
+    /*display: -ms-flexbox;*/
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
+}
+
+    .smallListIconTextItem img.smallListIconTextItem-Image 
+    {
+        width: 100%;
+        height: 100%;
+        position : absolute;
+        clip: inherit;
+        margin: 0px;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        z-index : 1;
+        opacity: 0.4;
+    }
+
+    .smallListIconTextItem .smallListIconTextItem-Detail
+    {
+        display : block;
+        position : absolute;
+        margin: 5px;
+        word-wrap: break-word;
+        z-index : 42;
+    }
+
+
+.smallListIconTextItem .smallListIconTextItem-Bottom
+{
+    position : absolute;
+    bottom: 5px;
+    right : 5px;
+    margin: 5px;
+    word-wrap: break-word;
+    z-index : 42;
+}
+
+   .listLayoutTopHeaderTemplateRoot, .gridLayoutLeftHeaderTemplateRoot {
+        font-size: larger;
+        margin-left: 16px;
+    }
+.text-centered {
+    width : 100%;
+    height : 100%;
+    text-align: center;
+    font-size: xx-large;
+    position: absolute;
+
+}
+/* CSS applied to the ListViews in this sample */
+#listView
+{
+
+    height: 100%;
+}
+
