@@ -15,7 +15,7 @@ Ooyala.Util.createNamespace("Ooyala.Analytics");
  *    <script type="text/javascript">
  *      var videoContainer = document.getElementById("video");
  *      videoContainer.setAttribute("data-embedId", embedcode1);
- *      var reporter = Ooyala.Analytics.HTML5Reporter(pcode1, videoContainer);
+ *      var reporter = Ooyala.Analytics.XboxOneReporter(pcode1, videoContainer);
  *      //Report a custom event
  *      reporter.reportCustomEvent("myCustomEvent", { key1: value1, key2: value2});
  *    </script>
