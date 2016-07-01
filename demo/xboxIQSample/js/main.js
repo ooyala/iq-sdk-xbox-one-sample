@@ -10,10 +10,9 @@
                 // TODO: This application has been reactivated from suspension.
                 // Restore application state here.
             }
-            args.setPromise(WinJS.UI.processAll().then(function() {
-                // TODO: Your code here.
 
-                //Workaround for UI bug in the dev preview
+            args.setPromise(WinJS.UI.processAll().then(function() {
+                // Workaround for UI bug in the dev preview
                 var applicationView = Windows.UI.ViewManagement.ApplicationView.getForCurrentView();
                 applicationView.setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
 
@@ -21,9 +20,6 @@
                 player.setAttribute('data-oo-embedId', "k4cWdsdzoTxuCp6lyBN7TSTsI6OmdII9");
                 var adapter = new Ooyala.Analytics.XboxOneReporter("pcode", player);
                 player.play();
-
-
-
             }));
         }
     };
